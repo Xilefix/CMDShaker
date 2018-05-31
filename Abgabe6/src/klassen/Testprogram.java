@@ -17,10 +17,11 @@ public class Testprogram {
 		Artikel test [] = new Artikel [6];
         test[0] = new Buch(2,2,15,"Bucheins",350);
         test[1] = new Buch(4,10,22,"Buchzwei",1000);
-        test[2] = new Kamera(5,5,500,"Kameraeins", 123);
-        test[3] = new Kamera(3,7,300,"Kamerazwei", 156);
         test[4] = new Audio(7,7,20,"Audioeins",3);
         test[5] = new Audio(4,5,20,"Audiozwei",1);
+        test[2] = new Kamera(5,5,500,"Kameraeins", 123);
+        test[3] = new Kamera(3,7,300,"Kamerazwei", 156);
+        
         printArtikel(test); 
         
         
