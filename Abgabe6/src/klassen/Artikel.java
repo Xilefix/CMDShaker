@@ -21,8 +21,9 @@ public class Artikel {
 	public void print() {
 		System.out.println("Artikel: "+name+"_"+aktAnzahl+"_"+minAnzahl+"_"+"Netto-Preis:"+nettoPreis);
 	}
-	public void printBestellung(int bestellAnz) {
-		System.out.println(name+"_ zu bestellende Anzahl: "+bestellAnz+"*"+nettoPreis+"="+);
+	public void printBestellung(double bestellAnz) {
+		double gesamt=((bestellAnz*nettoPreis*mwst/100)+(bestellAnz*nettoPreis));
+		System.out.println(name+" zu bestellende Anzahl: "+bestellAnz+"*"+nettoPreis+"="+(bestellAnz*nettoPreis)+"  +"+(bestellAnz*nettoPreis*mwst/100)+" MWSt. "+mwst+"%  Gesamt:"+gesamt);
 		
 	}
 	
