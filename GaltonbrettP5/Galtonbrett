@@ -1,0 +1,19 @@
+import random
+
+def zufallzahl():
+    return int(2*random.random())
+
+r = int(input('Anzahl an Reihen:'))
+n = int(input('Anzahl an Kugeln:'))
+behaelter = [0,0,0,0,0,0,0,0,0,0,0]
+kugel = 0
+while kugel < n:
+    reihe = 0
+    ergebnis = 0
+    while reihe < r:
+        ergebnis = ergebnis + zufallzahl()
+        reihe = reihe + 1
+        behaelter[ergebnis] = behaelter[ergebnis] + 1
+        kugel = kugel +1
+print(behaelter)    
+    
