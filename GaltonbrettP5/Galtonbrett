@@ -13,7 +13,7 @@ while kugel < n:
     while reihe < r:
         ergebnis = ergebnis + zufallzahl()
         reihe = reihe + 1
-        behaelter[ergebnis] = behaelter[ergebnis] + 1
-        kugel = kugel +1
+    behaelter[ergebnis] = behaelter[ergebnis] + 1
+    kugel = kugel +1
 print(behaelter)    
     
