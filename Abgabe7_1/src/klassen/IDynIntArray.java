@@ -5,7 +5,7 @@ public interface IDynIntArray {
 	void setElementAt(int i, int e); 
 	int getElementAt(int i);
 	int getElementCount();
-	void print();
+	void print()
 
 
 }
