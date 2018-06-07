@@ -1,4 +1,4 @@
-package Klasse;
+package klassen;
 
 public class DynIntArray {
 	void add(int e) {}

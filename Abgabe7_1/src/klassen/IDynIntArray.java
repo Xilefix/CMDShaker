@@ -1,5 +1,6 @@
-package Klasse;
+package klassen;
 
 public interface IDynIntArray {
+	
 
 }
