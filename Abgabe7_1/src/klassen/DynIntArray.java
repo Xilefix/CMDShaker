@@ -1,6 +1,6 @@
 package klassen;
 
-public class DynIntArray implements IDynIntArray{
+public class DynIntArray extends ADynIntArray{
 	public void add(int e) {}
 	public void setElementAt(int i, int e) {}
 	public int getElementAt(int i) { return 0; }
