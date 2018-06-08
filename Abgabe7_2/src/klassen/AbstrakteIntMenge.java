@@ -4,13 +4,12 @@ public abstract class AbstrakteIntMenge implements IntMenge {
 
 	@Override
 	public void add(int i) {
-		// TODO Auto-generated method stub
+
 
 	}
 
 	@Override
 	public void remove(int i) {
-		// TODO Auto-generated method stub
 
 	}
 
