@@ -1,35 +1,58 @@
 package klassen;
 
+import java.util.stream.IntStream;
+
 public class IntMengeImpl extends AbstrakteIntMenge {
+	int array[];
 
 	@Override
 	public void add(int i) {
-		// TODO Auto-generated method stub
+		if (contains(i)==true)
+		{
+			int[]  arr = new int[array.length+1];
+			arr[array.length]=i;
+			return ;
+		}
+		else 
+		{
+			return;
+			
+		}
+			
 
 	}
 
 	@Override
 	public void remove(int i) {
-		// TODO Auto-generated method stub
+		if(this.contains(i)==true)
+		{
+			
+		}
+		
 
 	}
 
 	@Override
 	public boolean contains(int i) {
-		// TODO Auto-generated method stub
-		return false;
+		if(IntStream.of(array).anyMatch(x -> x == i))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}	
 	}
 
 	@Override
 	public int getSize() {
-		// TODO Auto-generated method stub
-		return 0;
+		return array.length;
 	}
 
 	@Override
 	public int[] getElements() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return array.clone();
 	}
 
 }

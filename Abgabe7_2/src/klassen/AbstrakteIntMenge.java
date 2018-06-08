@@ -17,10 +17,11 @@ public abstract class AbstrakteIntMenge implements IntMenge {
 
 	@Override
 	public int getSum() {
-		int arr[];
+		int l= this.getSize();
+		int[] arr = new int[l];
 		arr	= getElements();
 		int sum = 0;
-		for(int counter=0;counter<getSize()-1;counter++){
+		for(int counter=0;counter<this.getSize()-1;counter++){
 			sum+=arr[counter];
     }
     return sum;
