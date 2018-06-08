@@ -26,7 +26,15 @@ public class IntMengeImpl extends AbstrakteIntMenge {
 	public void remove(int i) {
 		if(this.contains(i)==true)
 		{
-			
+			int a[]= this.getElements();
+			for(int s : a)
+			{
+				if(i==array[s])
+				{
+					array[s]=0;
+					return;
+				}
+			}
 		}
 		
 
