@@ -12,10 +12,9 @@ def dual(zahl):
         return dual(ganz) + zeichen
     
 
-k=3    
-n = 1
+k=3    #Anzahl Disks
 m=2**k
-for n in range(0,m):
+for n in range(1,m):
     print (dual(n))
     
 #letztes Bit: Disk 1(kleinste)
