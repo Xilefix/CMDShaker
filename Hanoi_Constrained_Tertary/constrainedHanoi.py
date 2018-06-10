@@ -20,3 +20,6 @@ k=3    #Anzahl Disks 3:26 4:80
 m=3**k
 for n in range(1,m):
     print (tertiar(n))
+    
+    
+# https://www.youtube.com/watch?v=bdMfjfT0lKk    

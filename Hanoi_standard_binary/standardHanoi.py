@@ -14,4 +14,5 @@ def Turm(k,a,b):
         
 Turm(3, 1, 2)
 
-#https://sbj42.github.io/projects/tower-of-hanoi/dist/
+# https://sbj42.github.io/projects/tower-of-hanoi/dist/
+# https://www.youtube.com/watch?v=2SUvWfNJSsM
