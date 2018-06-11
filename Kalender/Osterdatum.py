@@ -11,4 +11,11 @@ def Ostern(x):
     os = og + oe
     return os
 
-print Ostern(2020)
+def Osterdatum(x):
+    if Ostern(x)>31:
+        print (Ostern(x)-31, "-ter April")
+    else:
+        print (Ostern(x),"-ter Maerz")
+    
+        
+Osterdatum(1989)
