@@ -1,8 +1,8 @@
 package klassen;
 
 public class Rectangle implements ResizeableGO, MoveableGO {
-	//Varibles
-	Rectangle rects[] = new Rectangle[10];
+	
+	
 	
 	//Methods
 	@Override
@@ -41,5 +41,6 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 	public static void moveAll(float dx, float dy, MoveableGO mgo[]) {
 		for (MoveableGO m : mgo) m.move(dx, dy);
 	}
+	Rectangle rects[] = new Rectangle[10];
 	
 }
