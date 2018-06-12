@@ -12,7 +12,7 @@ def Turm(k,a,b):
     Turm(k-1, c, b)
     
         
-Turm(3, 1, 2)
+Turm(4, 1, 2)
 
 # https://sbj42.github.io/projects/tower-of-hanoi/dist/
 # https://www.youtube.com/watch?v=2SUvWfNJSsM

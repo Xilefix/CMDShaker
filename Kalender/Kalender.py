@@ -81,9 +81,10 @@ m = 1
 while m != 13:
     print(Monat(m))
     print("Mo    Di    Mi    Do    Fr    Sa    So")
-    print (wochentag(2000, m, 1)*'     ', ) 
+    print (wochentag(2000, m, 1)*'234', ) 
     m = m + 1
     
+
 
 
 
