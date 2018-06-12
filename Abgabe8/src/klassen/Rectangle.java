@@ -50,6 +50,6 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 	
 	
 	Rectangle rects[] = new Rectangle[4];
-	rects[0] = 
+	rects[0] = height;
 	
 }
