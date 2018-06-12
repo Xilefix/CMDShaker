@@ -2,7 +2,7 @@ package klassen;
 
 public class Rectangle implements ResizeableGO, MoveableGO {
 	//Varibles
-	Rectangle rects[] = new [];
+	Rectangle rects[] = new Rectangle[10];
 	
 	
 	@Override
