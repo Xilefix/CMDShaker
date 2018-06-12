@@ -30,7 +30,7 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 	}
 
 	@Override
-	public void resize(float x) {
+	public void resize(float width) {
 		// TODO Auto-generated method stub
 
 	}
