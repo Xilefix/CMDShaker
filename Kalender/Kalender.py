@@ -83,8 +83,8 @@ def Monat(monat):
 m = 1
 
 while m != 13:
-    z = ""
-    z = z 
+    #z = ""?
+    #z = z ?
     print(Monat(m))
     print("Mo    Di    Mi    Do    Fr    Sa    So")
     print (wochentag(2000, m, 1)*'234', ) 
