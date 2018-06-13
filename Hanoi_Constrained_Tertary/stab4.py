@@ -12,4 +12,4 @@ def solve(scheibe, quelle, hilfe1, hilfe2, ziel):
         print("Von",hilfe2,"nach", ziel)
         solve(scheibe - 2,  hilfe1, quelle, hilfe2, ziel)
 
-solve(3, 'A', 'B', 'C', 'D')
+solve(10, 'A', 'B', 'C', 'D')

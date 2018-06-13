@@ -43,13 +43,21 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 		for (MoveableGO m : mgo) m.move(dx, dy);
 	}
 	
-	public int height;
-	public int width;
-	public int x; //The X coordinate of the upper-left corner of the Rectangle.
-	public int y; //The Y coordinate of the upper-left corner of the Rectangle.
+	public Rectangle height;
+	public Rectangle width;
+	public float x; //The X coordinate of the upper-left corner of the Rectangle.
+	public float y; //The Y coordinate of the upper-left corner of the Rectangle.
 	
 	
-	Rectangle rects[] = new Rectangle[4];
-	rects[0] = height;
-	
+	Rectangle[] rects = new Rectangle[4];
+	{
+		for (int i=0; i<4; i++)
+		{
+			rects[i] = new Rectangle();
+		}
+		for (int i=0; i<4; i++)
+		{
+			rects[i] = height;
+		}
+	}
 }

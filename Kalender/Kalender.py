@@ -57,6 +57,9 @@ def wochentag(jahr, monat, tag):
         elif monat == 2:
             k = 1
     d = tag + k + j + j // 4 - 2 * (c % 4)
+    if d % 7 == 0:
+        return 7
+        
     return d % 7
 
 
@@ -78,7 +81,10 @@ def Monat(monat):
         
 # Programmstart
 m = 1
+
 while m != 13:
+    z = ""
+    z = z 
     print(Monat(m))
     print("Mo    Di    Mi    Do    Fr    Sa    So")
     print (wochentag(2000, m, 1)*'234', ) 
