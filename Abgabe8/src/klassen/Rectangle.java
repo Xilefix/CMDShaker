@@ -49,7 +49,7 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 	public float y; //The Y coordinate of the upper-left corner of the Rectangle.
 	
 	
-	Rectangle[] rects = new Rectangle[4];
+	Rectangle[] rects = new Rectangle[4];// siehe 2te Aufgabe array Erstellung
 	
 	/*{
 		for (int i=0; i<4; i++)
