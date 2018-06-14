@@ -2,12 +2,18 @@ package klassen;
 
 public class Rectangle implements ResizeableGO, MoveableGO {
 	
+	//Variables
+	public float height;
+	public float width;
+	public float x; //The X coordinate of the upper-left corner of the Rectangle.
+	public float y; //The Y coordinate of the upper-left corner of the Rectangle.
 	
 	
 	//Methods
 	@Override
-	public void move(float x, float y) {
-		// TODO Auto-generated method stub
+	public void move(float x, float y) {		
+		this.x = x;
+		this.y = y;
 
 	}
 
@@ -31,8 +37,7 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 
 	@Override
 	public void resize(float width) {
-		// TODO Auto-generated method stub
-
+		this.width = width;
 	}
 	
 	public static void resizeAll(float r, ResizeableGO rgo[]) {
@@ -43,10 +48,7 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 		for (MoveableGO m : mgo) m.move(dx, dy);
 	}
 	
-	public Rectangle height;
-	public Rectangle width;
-	public float x; //The X coordinate of the upper-left corner of the Rectangle.
-	public float y; //The Y coordinate of the upper-left corner of the Rectangle.
+	
 	
 	
 	Rectangle[] rects = new Rectangle[4];// siehe 2te Aufgabe array Erstellung
