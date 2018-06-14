@@ -17,9 +17,8 @@ public class Tetrapack extends Behaeltnis {
 	}
 
 	@Override
-	public int volumen() {
-		// TODO Auto-generated method stub
-		return 0;
+	public double volumen() {
+		return this.volumen;
 	}
 
 }
