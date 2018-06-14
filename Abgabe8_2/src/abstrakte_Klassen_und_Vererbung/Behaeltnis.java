@@ -15,5 +15,6 @@ public abstract class Behaeltnis {
 	
 	//Methods
 	public abstract void println();
+	public abstract int volumen();
 
 }

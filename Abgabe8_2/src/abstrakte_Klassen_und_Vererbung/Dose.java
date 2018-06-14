@@ -10,8 +10,14 @@ public class Dose extends Behaeltnis {
 
 	@Override
 	public void println() {
-		// TODO Auto-generated method stub
+		System.out.println("Parameter: " + this.flaeche +", " + this.hoehe);
 		
+	}
+
+	@Override
+	public int volumen() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
