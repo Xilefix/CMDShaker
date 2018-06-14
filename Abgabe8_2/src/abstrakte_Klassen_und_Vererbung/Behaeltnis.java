@@ -1,6 +1,6 @@
 package abstrakte_Klassen_und_Vererbung;
 
-public class Behaeltnis {
+public abstract class Behaeltnis {
 	/*public Behaeltnis() {
 		
 	}*/
@@ -14,5 +14,8 @@ public class Behaeltnis {
 	public double x;
 	public double y;
 	public double z;
+	
+	//Methods
+	public abstract void println();
 
 }
