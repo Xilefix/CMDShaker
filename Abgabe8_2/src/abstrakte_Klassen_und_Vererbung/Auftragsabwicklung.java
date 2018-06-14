@@ -16,10 +16,15 @@ public static void main(String args[]) {
 	// berechne das Gesamtvolumen der Bestellung
 	double gesamtvolumen = 0.0;
 	for (int i = 0; i < bestellung.length; i++) {
-		gesamtvolumen = gesamtvolumen + bestellung[i].volumen;
+		gesamtvolumen = gesamtvolumen + bestellung[i].volumen();
 	}
+	System.out.println(gesamtvolumen);
 	// und die Restmenge der Wochenproduktion
 	double restmengewoche = produktion - gesamtvolumen;
+	if (produktion == restmengewoche)
+	{
+		System.out.println(restmengewoche);
+	}
 	// >>> Diesen Programmteil sollen Sie hier erg¨anzen! <<<
 }
 }
