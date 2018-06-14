@@ -6,11 +6,9 @@ public abstract class Behaeltnis {
 	}*/
 	public double volumen;
 	//Dose
-	public double volumenDose;
 	public double flaeche;
 	public double hoehe;
-	//Tetrapack Kanten + Volumen
-	public double volumenTetrapack;
+	//Tetrapack Kanten
 	public double x;
 	public double y;
 	public double z;

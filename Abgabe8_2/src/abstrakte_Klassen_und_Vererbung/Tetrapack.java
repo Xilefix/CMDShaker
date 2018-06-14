@@ -5,8 +5,14 @@ public class Tetrapack extends Behaeltnis {
 		this.x = x;
 		this.y = y;
 		this.z = z;
-		this.volumenTetrapack = x*y*z;
+		this.volumen = x*y*z;
 		
+		
+	}
+
+	@Override
+	public void println() {
+		// TODO Auto-generated method stub
 		
 	}
 
