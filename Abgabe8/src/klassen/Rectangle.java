@@ -46,13 +46,5 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 	public void resize(float width) {
 		this.width = width;
 	}
-	
-	public static void resizeAll(float r, ResizeableGO rgo[]) {
-		for (ResizeableGO g : rgo) g.resize(r);
-	}
-	
-	public static void moveAll(float dx, float dy, MoveableGO mgo[]) {
-		for (MoveableGO m : mgo) m.move(dx, dy);
-	}
-	
+
 }
