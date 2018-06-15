@@ -58,7 +58,7 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 
 
 public static void main(String[] args) {
-	Rectangle[] rects = new Rectangle[4];// siehe 2te Aufgabe array Erstellung
+	Rectangle[] rects = new Rectangle[4];
 	//Objecte in Array initialisieren 
 	rects[0] = new Rectangle(8,7,3,2);
 	rects[1] = new Rectangle(8,7,3,2);
