@@ -48,19 +48,4 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 		for (MoveableGO m : mgo) m.move(dx, dy);
 	}
 	
-	
-	
-	
-	Rectangle[] rects = new Rectangle[4];// siehe 2te Aufgabe array Erstellung
-	
-	/*{
-		for (int i=0; i<4; i++)
-		{
-			rects[i] = new Rectangle();
-		}
-		for (int i=0; i<4; i++)
-		{
-			rects[i] = height;
-		}
-	}*/
 }
