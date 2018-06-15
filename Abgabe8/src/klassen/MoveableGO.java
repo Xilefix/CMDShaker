@@ -1,6 +1,6 @@
 package klassen;
 
-public interface MoveableGO {
+public interface MoveableGO extends GraphObj{
 	//Methods
 	public void setColor (int x);
 	public void show();

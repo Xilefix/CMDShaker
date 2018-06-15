@@ -1,6 +1,6 @@
 package klassen;
 
-public interface ResizeableGO {
+public interface ResizeableGO extends GraphObj {
 	//Methods
 	public void setColor (int x);
 	public void show();
