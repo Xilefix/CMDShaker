@@ -56,12 +56,17 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 		for (MoveableGO m : mgo) m.move(dx, dy);
 	}
 
+
 public static void main(String[] args) {
 	Rectangle[] rects = new Rectangle[4];// siehe 2te Aufgabe array Erstellung
 	//Objecte in Array initialisieren 
-	rects[0] = new ReResizeableGO();
-	resizeAll(2.0, rects[4]);
-	moveAll(dx, dy, mgo);
+	rects[0] = new Rectangle(8,7,3,2);
+	rects[1] = new Rectangle(8,7,3,2);
+	rects[2] = new Rectangle(8,7,3,2);
+	rects[3] = new Rectangle(8,7,3,2);
 	
-
+	resizeAll(2, rects);
+	moveAll(2, 3, rects);
+	}
+}
 
