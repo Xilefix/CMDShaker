@@ -8,6 +8,13 @@ public class Rectangle implements ResizeableGO, MoveableGO {
 	public float x; //The X coordinate of the upper-left corner of the Rectangle.
 	public float y; //The Y coordinate of the upper-left corner of the Rectangle.
 	
+	public Rectangle(float height, float width, float x, float y){
+		this.height = height;
+		this.height = width;
+		this.height = x;
+		this.height = y;
+				
+	}
 	
 	//Methods
 	@Override
