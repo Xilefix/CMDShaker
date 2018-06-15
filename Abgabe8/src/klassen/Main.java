@@ -8,7 +8,7 @@ public class Main {
 		{
 			for (int i=0; i<4; i++)
 			{
-				rects[i] = new Rectangle();
+				rects[i] = new Rectangle(4,3,3,1);
 			}
 
 		}
