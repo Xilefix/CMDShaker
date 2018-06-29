@@ -117,7 +117,7 @@ while m != 13:
     print("Mo Di Mi Do Fr Sa So")
     
     sys.stdout.write((wochentag(jahr, m, 1)-1)*'*  ') #3 Zeichen Bsp "Mo*Di*..."
-    while d != anzahl(jahr, m):
+    while d <= anzahl(jahr, m):
         if wochentag(jahr, m, d) == 7 and d < 10:
             sys.stdout.write( str(d)+ "  " + "\n")
         elif wochentag(jahr, m, d) != 7 and d < 10:
