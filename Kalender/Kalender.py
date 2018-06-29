@@ -1,3 +1,27 @@
+import sys
+#für den Printersatz
+
+def Ostern(x):
+    k = x // 100
+    m = 15 + (3 * k + 3) // 4 - (8 * k + 13) // 25
+    s = 2 - (3 * k + 3) // 4
+    a = x % 19
+    d = (19 * a + m) % 30
+    r = d // 29 + (d // 28 - d // 29) * (a // 11)
+    og = 21 + d - r
+    sz = 7 - (x + x // 4 + s) % 7
+    oe = 7 - (og - sz) % 7
+    os = og + oe
+    return os
+
+def Osterdatum(x):
+    print("Ostern ist am: ")
+    if Ostern(x)>31:
+        print (Ostern(x)-31, "-ten April")
+    else:
+        print (Ostern(x),"-ten Maerz")    
+        
+
 def schaltjahr(jahr):
     if jahr % 400 == 0 or jahr % 4 == 0 and jahr % 100 != 0:
         return True
@@ -80,16 +104,34 @@ def Monat(monat):
      }[monat]
         
 # Programmstart
+jahr = 2018
+print("Jahr: ", jahr)
+Osterdatum(jahr)
 m = 1
 
 while m != 13:
-    #z = ""?
-    #z = z ?
+    d = 1
+    
+    
     print(Monat(m))
-    print("Mo    Di    Mi    Do    Fr    Sa    So")
-    print (wochentag(2000, m, 1)*'234', ) 
+    print("Mo Di Mi Do Fr Sa So")
+    
+    sys.stdout.write((wochentag(jahr, m, 1)-1)*'*  ') #3 Zeichen Bsp "Mo*Di*..."
+    while d != anzahl(jahr, m):
+        if wochentag(jahr, m, d) == 7 and d < 10:
+            sys.stdout.write( str(d)+ "  " + "\n")
+        elif wochentag(jahr, m, d) != 7 and d < 10:
+            sys.stdout.write(str(d)+ "  ")
+        elif wochentag(jahr, m, d) == 7 and d > 9:
+            sys.stdout.write(str(d)+ " " "\n")
+        elif wochentag(jahr, m, d) != 7 and d > 9:
+            sys.stdout.write(str(d)+ " ")
+        
+        d = d + 1
+    sys.stdout.write("\n\n")
     m = m + 1
     
+    #sys.stdout.write() statt print ohne Zeilenumbruch
 
 
 
