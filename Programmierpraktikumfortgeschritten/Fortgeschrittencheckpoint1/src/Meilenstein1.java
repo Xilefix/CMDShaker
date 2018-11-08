@@ -17,8 +17,7 @@ public class Meilenstein1 {
 		String url = sc.nextLine(); // einlesen der adresse POP3
 		System.out.println("Geben Sie am besten direkt den Port ein:");
 		int port = Integer.valueOf(sc.nextLine()); // string in Zahl umwandeln
-		System.out.println("Wir verbinden uns nun mit dem Server " + url + ":"
-				+ port + ". Bitte warten. :)");
+		System.out.println("Wir verbinden uns nun mit dem Server " + url + ":"+ port + ". Bitte warten. :)");
 		try {
 			Socket server = new Socket(url, port);
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
@@ -66,35 +65,29 @@ public class Meilenstein1 {
 									zeilen.add(antwort);
 								}
 
-								Email email = new Email(i, zeilen);	//speichern Liste an  
-Zeilen in neue Email
+								Email email = new Email(i, zeilen);	//speichern Liste an Zeilen in neue Email
 
 							}
 
 						} else {
-							System.out
-									.println("Wir haben einen Fehler beim Einlesen der Emails.");
+							System.out.println("Wir haben einen Fehler beim Einlesen der Emails.");
 						}
 
 					} else {
-						System.out
-								.println("Wir haben ein Problem mit Ihrem Benutzernamen oder Ihrem Passwort. Ändern Sie das Bitte!");
+						System.out.println("Wir haben ein Problem mit Ihrem Benutzernamen oder Ihrem Passwort. Ändern Sie das Bitte!");
 					}
 
 				} else {
-					System.out
-							.println("Wir haben ein Problem mit Ihrem Benutzernamen. Ändern Sie das Bitte!");
+					System.out.println("Wir haben ein Problem mit Ihrem Benutzernamen. Ändern Sie das Bitte!");
 				}
 			} else {
-				System.out
-						.println("Die Verbindung ist fehlgeschlagen. Das tut uns Leid.");
+				System.out.println("Die Verbindung ist fehlgeschlagen. Das tut uns Leid.");
 			}
 			server.close();
 		} catch (IOException e) { // Fehler fangen, falls falsche Eingabe oder
 									// Server unereichbar
 			e.printStackTrace();
-			System.out
-					.println("Sorry, Sie haben sich da wohl vertippt oder der Server schläft. Bitte versuchen Sie es erneut:");
+			System.out.println("Sorry, Sie haben sich da wohl vertippt oder der Server schläft. Bitte versuchen Sie es erneut:");
 		}
 
 		sc.close(); // Scanner schließen
