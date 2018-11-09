@@ -67,6 +67,7 @@ public class Meilenstein1 {
 								Email email = new Email(i, zeilen);	//speichern Liste an Zeilen in neue Email
 
 							}
+							
 
 						} else {
 							System.out.println("Wir haben einen Fehler beim Einlesen der Emails.");
@@ -81,6 +82,12 @@ public class Meilenstein1 {
 				}
 			} else {
 				System.out.println("Die Verbindung ist fehlgeschlagen. Das tut uns Leid.");
+			}
+			writer.write("QUIT\n");
+			writer.flush();
+			antwort = reader.readLine();
+			if (antwort.startsWith("+OK")) {
+				System.out.println("Beendet");
 			}
 			server.close();
 		} catch (IOException e) { // Fehler fangen, falls falsche Eingabe oder
