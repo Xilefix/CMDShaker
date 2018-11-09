@@ -12,8 +12,7 @@ public class Meilenstein1 {
 
 	public static void main(String args[]) {
 		System.out.println("Geben Sie die Serveradresse POP3 ein:");
-		Scanner sc = new Scanner(System.in); // Eingabe wird gescannt und in sc
-												// gespeichert
+		Scanner sc = new Scanner(System.in); // Eingabe wird gescannt und in sc gespeichert
 		String url = sc.nextLine(); // einlesen der adresse POP3
 		System.out.println("Geben Sie am besten direkt den Port ein:");
 		int port = Integer.valueOf(sc.nextLine()); // string in Zahl umwandeln
