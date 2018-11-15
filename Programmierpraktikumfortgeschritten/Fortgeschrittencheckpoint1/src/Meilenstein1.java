@@ -11,10 +11,16 @@ public class Meilenstein1 {
 
 	public static void main(String args[]) {
 		System.out.println("Geben Sie die Serveradresse POP3 ein:");
+<<<<<<< HEAD
 		Scanner sc = new Scanner(System.in); // eingabe wird gescannt und in sc
 												// gespeichert
 		String url = sc.nextLine(); // einlesen der adresse POP3
 		System.out.println("Geben Sie bitte jetzt den Port ein:");
+=======
+		Scanner sc = new Scanner(System.in); // Eingabe wird gescannt und in sc gespeichert
+		String url = sc.nextLine(); // einlesen der Adresse POP3
+		System.out.println("Geben Sie am besten direkt den Port ein:");
+>>>>>>> refs/remotes/origin/master
 		int port = Integer.valueOf(sc.nextLine()); // string in Zahl umwandeln
 		System.out.println("Wir verbinden uns nun mit dem Server. " + url + ":"
 				+ port + ". Bitte warten Sie solange.");
@@ -95,6 +101,8 @@ public class Meilenstein1 {
 									}
 								}
 							}
+							
+							
 
 						} else {
 							System.out
@@ -114,6 +122,7 @@ public class Meilenstein1 {
 				System.out
 						.println("Die Verbindung ist fehlgeschlagen. Das tut uns Leid.");
 			}
+<<<<<<< HEAD
 			
 			writer.write("QUIT\n");
 			writer.flush();
@@ -122,6 +131,14 @@ public class Meilenstein1 {
 				System.out.println("Das Programm wird beendet. Bis demnächst!");
 			}
 			
+=======
+			writer.write("QUIT\n");
+			writer.flush();
+			antwort = reader.readLine();
+			if (antwort.startsWith("+OK")) {
+				System.out.println("Beendet");
+			}
+>>>>>>> refs/remotes/origin/master
 			server.close();
 			
 		} catch (IOException e) { // Fehler fangen, falls falsche Eingabe oder server unerreichbar
