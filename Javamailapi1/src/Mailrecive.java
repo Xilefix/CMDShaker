@@ -44,9 +44,9 @@ public class Mailrecive {
                      System.out.println(messages[Integer.valueOf(mailNum)-1].getContent() );
 
 
-                 System.out.println("\nWas möchten sie als nächstes tun?");
-                 System.out.println("1 um eine weitere Nachricht zu lesen.");
-                 System.out.println("0 um das Programm zu beenden. (bzw. jede andere Zahl)");
+                 System.out.println("\nWas willst du tun?");
+                 System.out.println("1 weitere Nachricht lesen");
+                 System.out.println("0 Programm beenden. (bzw. jede andere Zahl)");
                  h= Integer.valueOf(scanner.nextLine());
              }
              scanner.close();
