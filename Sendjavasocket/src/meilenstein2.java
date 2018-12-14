@@ -10,22 +10,24 @@ import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Scanner;
 
+//import javax.net.ssl.SSLSocket;
+
 public class meilenstein2 {
 
 	public static void main(String args[]) {
 
-		System.out.println("Geben Sie die Internetadresse ein:");//firemail.de
+		System.out.println("Internetadresse:");//firemail.de
 		Scanner sc = new Scanner(System.in); // eingabe wird gescannt und in sc
 												// gespeichert
 		String url = sc.nextLine(); // einlesen der SMTP adresse
-		System.out.println("Geben Sie bitte jetzt den Port ein:");//587
+		System.out.println("Port:");//587
 
 		int port = Integer.valueOf(sc.nextLine()); // string in Zahl umwandeln
 
-		System.out.println("Geben Sie Ihren Ihre Emailadresse ein:");//unijena123@firemail.de
+		System.out.println("Emailadresse:");//unijena123@firemail.de
 		String user = sc.nextLine();
 
-		System.out.println("Geben Sie bitte Ihr Passwort ein:");//Felix#jena1
+		System.out.println("Passwort:");//Felix#jena1
 		String pass = sc.nextLine();
 
 		while (true) {
@@ -45,17 +47,17 @@ public class meilenstein2 {
 					ArrayList<String> email = new ArrayList<>(); // Email zeilen
 																	// erstellen
 
-					System.out.println("Wie viele Empfänger soll es geben?");
+					System.out.println("Wie viele Empfänger?");
 					int anzahlempfaenger = Integer.valueOf(sc.nextLine());
 					for (int i = 0; i < anzahlempfaenger; i++) {
-						System.out.println("Geben Sie eine Empfängeradresse ein:");
+						System.out.println("Empfängeradresse:");
 						empfaenger.add(sc.nextLine());
 					}
 
-					System.out.println("Schreiben Sie Ihren Betreff hier:");
+					System.out.println("Betreff:");
 					String subject = sc.nextLine();
 
-					System.out.println("Schreiben Sie Ihre Email hier rein:");
+					System.out.println("Emailinhalt:");
 					while (true) {
 						String content = sc.nextLine();
 						email.add(content);
@@ -65,6 +67,7 @@ public class meilenstein2 {
 					}
 
 					try {
+						//SSLSocket socket = (SSLSocket) ((SSLSocketFactory) SSLSocketFactory.getDefault()).createSocket(InetAddress.getByName("smtp.firemail.de"), 587);
 						Socket server = new Socket(url, port);
 						BufferedReader reader = new BufferedReader(new InputStreamReader(server.getInputStream()));
 						// lesen nachricht vom server
@@ -114,7 +117,7 @@ public class meilenstein2 {
 												writer.flush();
 												antwort = reader.readLine();
 												if (!antwort.startsWith("250")) {
-													System.out.println("Fehler mit einer eingegebenen Empfaengeradresse.");
+													System.out.println("Empfaengeradresse-error");
 												}
 											}
 											writer.write("DATA\n");
@@ -154,42 +157,42 @@ public class meilenstein2 {
 													server.close();
 
 												} else {
-													System.out.println("Fehler mit der Email.");
+													System.out.println("Email-error");
 												}
 											} else {
-												System.out.println("Fehler mit DATA.");
+												System.out.println("DATA-error");
 											}
 
 										} else {
-											System.out.println("Fehler mit Ihrer Empfaengeradresse.");
+											System.out.println("Empfaengeradressen-error");
 										}
 
 									} else {
-										System.out.println("Fehler mit Ihrem Passwort");
+										System.out.println("Passwort-error");
 									}
 
 								} else {
-									System.out.println("Fehler mit Ihrem Benutzernamen.");
+									System.out.println("Benutzernamen-error");
 								}
 
 							} else {
-								System.out.println("Authentifizierung nicht unterstützt.");
+								System.out.println("Authentifizierung falsch");
 
 							}
 
 						} else {
-							System.out.println("Die Verbindung ist fehlgeschlagen. Das tut uns Leid.");
+							System.out.println("Verbindungserror");
 						}
 
 					} catch (IOException e) {
 						e.printStackTrace();
-						System.out.println("Sorry, Sie haben sich da wohl vertippt oder der Server schläft. Bitte versuchen Sie es erneut:");
+						System.out.println("error, nochmal");
 					}
 				} else {
 					System.out.println("Falsche Eingabe!");
 				}
 			} catch (Exception e) {
-				System.out.println("Gib eine Zahl ein!");
+				System.out.println("Gib Zahl!");
 			}
 
 		}
