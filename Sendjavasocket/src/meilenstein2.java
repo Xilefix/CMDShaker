@@ -67,7 +67,18 @@ public class meilenstein2 {
 					}
 
 					try {
-						//SSLSocket socket = (SSLSocket) ((SSLSocketFactory) SSLSocketFactory.getDefault()).createSocket(InetAddress.getByName("smtp.firemail.de"), 587);
+						/*Socket server;
+                        
+                        if (port == 465) {
+                            javax.net.ssl.SSLSocketFactory factory =
+                            (javax.net.ssl.SSLSocketFactory) javax.net.ssl.SSLSocketFactory.getDefault();
+                            server = (SSLSocket)factory.createSocket(url, 465);
+                        }
+                        else {
+                            server = new Socket(url, port);
+                        }
+                        */
+
 						Socket server = new Socket(url, port);
 						BufferedReader reader = new BufferedReader(new InputStreamReader(server.getInputStream()));
 						// lesen nachricht vom server
