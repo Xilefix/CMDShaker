@@ -7,6 +7,8 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.net.ssl.SSLSocket;
+
 public class Meilenstein1 {
 
 	public static void main(String args[]) {
@@ -19,7 +21,18 @@ public class Meilenstein1 {
 		
 		
 		try {
-			Socket server = new Socket(url, port);
+			Socket server;
+            
+            if (port == 465) {
+                javax.net.ssl.SSLSocketFactory factory =
+                (javax.net.ssl.SSLSocketFactory) javax.net.ssl.SSLSocketFactory.getDefault();
+                server = (SSLSocket)factory.createSocket(url, 465);
+            }
+            else {
+                server = new Socket(url, port);
+            }
+            
+			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(server.getInputStream())); // lesen Nachricht vom Server
 			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(server.getOutputStream())); // schreiben Nachricht an Server
 
