@@ -9,8 +9,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Scanner;
-
-//import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocket;
 
 public class meilenstein2 {
 
@@ -67,7 +66,7 @@ public class meilenstein2 {
 					}
 
 					try {
-						/*Socket server;
+						Socket server;
                         
                         if (port == 465) {
                             javax.net.ssl.SSLSocketFactory factory =
@@ -77,9 +76,9 @@ public class meilenstein2 {
                         else {
                             server = new Socket(url, port);
                         }
-                        */
+                        
 
-						Socket server = new Socket(url, port);
+						
 						BufferedReader reader = new BufferedReader(new InputStreamReader(server.getInputStream()));
 						// lesen nachricht vom server
 						BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(server.getOutputStream()));
