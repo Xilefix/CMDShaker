@@ -341,9 +341,9 @@ class SendPanel extends JPanel implements ActionListener {
         Object source = e.getSource();
        
         if (source == SendButton) {
-        	String sendServer = emailEmpfaengerText.getText();
-        	String recServer =  subjectText.getText();
-        	String name = textText.getText();
+        	String emailEmpfaenger = emailEmpfaengerText.getText();
+        	String subject =  subjectText.getText();
+        	String text = textText.getText();
         	System.out.println(emailEmpfaengerText);
         	
             
