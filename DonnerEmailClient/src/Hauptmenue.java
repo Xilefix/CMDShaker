@@ -244,6 +244,7 @@ class AccPanel extends JPanel implements ActionListener {
         	String name = emailAbsenderText.getText();
         	String pw = passwortText.getText();
         	String port = portText.getText();
+        	
             
         }
         
