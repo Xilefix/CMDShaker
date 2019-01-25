@@ -100,9 +100,9 @@ class AccFrame extends JFrame {
 	
     public AccFrame() {
         setTitle("Acc Info");
-        setSize(1000, 800);
+        setSize(400, 800);
         centerWindow(this);
-        setResizable(true);
+        setResizable(false);
         JPanel panel = new AccPanel();
         this.add(panel);
     }
@@ -168,6 +168,21 @@ class AccPanel extends JPanel implements ActionListener {
     public AccPanel() { // display panel 
         JPanel displayPanel = new JPanel();
         displayPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        
+        //Labels
+        emailAbsenderLabel = new JLabel("E-mail Absender:");
+        displayPanel.add(emailAbsenderLabel);
+        
+        emailAbsenderText = new JTextField(30);
+        displayPanel.add(emailAbsenderText);
+        
+        
+        passwortLabel = new JLabel("Passwort: ");
+        displayPanel.add(passwortLabel);
+        
+        passwortText = new JTextField(30);
+        displayPanel.add(passwortText);
+        
         
         emailAbsenderLabel = new JLabel("E-mail Absender:");
         displayPanel.add(emailAbsenderLabel);
