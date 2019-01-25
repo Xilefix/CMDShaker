@@ -170,6 +170,7 @@ class AccPanel extends JPanel implements ActionListener {
         displayPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         
         //Labels
+        //EmailAbsender
         emailAbsenderLabel = new JLabel("E-mail Absender:");
         displayPanel.add(emailAbsenderLabel);
         
