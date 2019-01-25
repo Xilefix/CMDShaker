@@ -196,6 +196,14 @@ class AccPanel extends JPanel implements ActionListener {
         
         recServerText = new JTextField(30);
         displayPanel.add(recServerText);
+        
+      //Benutzer
+        benutzerLable = new JLabel("Benutzer:");
+        displayPanel.add(benutzerLable);
+        
+        benutzerText = new JTextField(30);
+        displayPanel.add(benutzerText);
+        
    
               
 // button panel
