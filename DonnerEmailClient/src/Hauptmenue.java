@@ -6,6 +6,7 @@ import java.text.NumberFormat;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -271,6 +272,7 @@ class AccPanel extends JPanel implements ActionListener {
         	//String pw = new String(((JPasswordField) passwortText).getPassword()); 
         	//http://www.zentut.com/java-swing/creating-password-field-by-using-jpasswordfield-class/
         	String port = portText.getText();
+        	JOptionPane.showMessageDialog(null, "Gesichert");
         	
             
         }
@@ -345,6 +347,7 @@ class SendPanel extends JPanel implements ActionListener {
         	String subject =  subjectText.getText();
         	String text = textText.getText();
         	System.out.println(emailEmpfaengerText);
+        	JOptionPane.showMessageDialog(null, "sendet");
         	
             
         }
