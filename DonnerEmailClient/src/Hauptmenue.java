@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 
@@ -182,6 +183,7 @@ class AccPanel extends JPanel implements ActionListener {
         displayPanel.add(passwortLabel);
         
         passwortText = new JTextField(30);
+        //final JPasswordField passwortText = new JPasswordField(30);
         displayPanel.add(passwortText);
         
         //SMTP
@@ -243,6 +245,8 @@ class AccPanel extends JPanel implements ActionListener {
         	String recServer =  recServerText.getText();
         	String name = emailAbsenderText.getText();
         	String pw = passwortText.getText();
+        	//String pw = new String(((JPasswordField) passwortText).getPassword()); 
+        	//http://www.zentut.com/java-swing/creating-password-field-by-using-jpasswordfield-class/
         	String port = portText.getText();
         	
             
