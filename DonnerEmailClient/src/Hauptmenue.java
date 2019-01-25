@@ -1,6 +1,6 @@
 
 import java.awt.*;
-
+import java.awt.event.*;
 
 
 import java.awt.Dimension;
@@ -18,7 +18,6 @@ public class Hauptmenue {
 
 	public static void main(String[] args) {
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
-
 		JFrame frame;
 		frame = new JFrame("DonnerEmailClient"); frame.setSize(d);
 		// Anzeigen des Frames
@@ -31,6 +30,27 @@ public class Hauptmenue {
 		fileMenu.add("Optionen");
 		fileMenu.add("Beenden");
 
+		//Button Acc
+		Button Acc = new Button("Acc");
+		frame.setLayout(new FlowLayout());
+		frame.add(Acc);
+		
+		
+		//passwort frame
+		JFrame framePass;
+		framePass = new JFrame("Acc Info"); 
+		framePass.setSize(1000,800);
+		
+		
+		//action
+		Acc.addActionListener(new ActionListener(){	public void actionPerformed(ActionEvent e) {
+			if ("Acc".equals(e.getActionCommand()));
+			framePass.setVisible(true);
+				
+
+		}});
+		Acc.setActionCommand("Acc");
+
 
 
 		// Erzeugen der Menüleiste und Hinzufügen der Menüs
@@ -38,6 +58,20 @@ public class Hauptmenue {
 		myMenuBar.add(fileMenu);
 		// Setzen der Menüleiste
 		frame.setMenuBar(myMenuBar);
+
+
+
+
 		}
+	//acc button
+
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
 
 	}
+
+
+
+
+}
+
