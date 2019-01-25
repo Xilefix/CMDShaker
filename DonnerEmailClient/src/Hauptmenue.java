@@ -15,18 +15,13 @@ public class Hauptmenue {
 	
 	
 	public static void main(String[] args) {
-		JFrame frameMain = new FrameHaupt();
-	    frameMain.setVisible(true);
+		JFrame MainFrame = new FrameHaupt();
+	    MainFrame.setVisible(true);
 	    
 	}
 }	
 		
-		/*Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
-		JFrame frame;
-		frame = new JFrame("DonnerEmailClient"); frame.setSize(d);
-		// Anzeigen des Frames
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		/*
 		// Erzeugen des File-Menüs
 		Menu fileMenu = new Menu("File");
 		fileMenu.add("neue eMail");
@@ -115,10 +110,29 @@ class AccFrame extends JFrame {
     }
 
 }
+class SendFrame extends JFrame {
+	
+    public SendFrame() {
+        setTitle("Send Info");
+        setSize(550, 500);
+        centerWindow(this);
+        setResizable(false);
+        JPanel panel = new SendPanel();
+        this.add(panel);
+    }
+
+    private void centerWindow(Window w) {
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        Dimension d = tk.getScreenSize();
+        setLocation((d.width - w.getWidth()) / 2, (d.height - w.getHeight()) / 2);
+    }
+
+}
 
 class HauptPanel extends JPanel implements ActionListener {
 
     private JButton AccButton = new JButton("Acc");
+    private JButton SendButton = new JButton("Senden");
     
 
     public HauptPanel() { // display panel 
@@ -136,6 +150,10 @@ class HauptPanel extends JPanel implements ActionListener {
         AccButton.addActionListener(this);
         buttonPanel.add(AccButton);
 
+// send button 
+        
+        SendButton.addActionListener(this);
+        buttonPanel.add(SendButton);
         
 
 
@@ -152,8 +170,13 @@ class HauptPanel extends JPanel implements ActionListener {
         Object source = e.getSource();
        
         if (source == AccButton) {
-        	JFrame frameAcc = new AccFrame();
-    	    frameAcc.setVisible(true);
+        	JFrame AccFrame = new AccFrame();
+    	    AccFrame.setVisible(true);
+            
+        }
+        if (source == SendButton) {
+        	JFrame SendFrame = new SendFrame();
+    	    SendFrame.setVisible(true);
             
         }
         
@@ -248,6 +271,80 @@ class AccPanel extends JPanel implements ActionListener {
         	//String pw = new String(((JPasswordField) passwortText).getPassword()); 
         	//http://www.zentut.com/java-swing/creating-password-field-by-using-jpasswordfield-class/
         	String port = portText.getText();
+        	
+            
+        }
+        
+                      
+    }
+    
+}
+class SendPanel extends JPanel implements ActionListener {
+	private JTextField emailEmpfaengerText,  subjectText, textText;
+    private JLabel emailEmpfaengerLabel, subjectLabel, textLabel ;
+    private JButton SendButton = new JButton("Send");
+    
+
+    public SendPanel() { // display panel 
+        JPanel displayPanel = new JPanel();
+        displayPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        
+        //Labels
+      //EmailEmpfänger
+        emailEmpfaengerLabel = new JLabel("Empfänger-Adressen(durch , getrennt:");
+        displayPanel.add(emailEmpfaengerLabel);
+
+        emailEmpfaengerText = new JTextField(80);
+        displayPanel.add(emailEmpfaengerText);
+
+
+        //Betreff
+        subjectLabel = new JLabel("Betreff: ");
+        displayPanel.add(subjectLabel);
+
+        subjectText = new JTextField(80);
+        displayPanel.add(subjectText);
+
+
+        //Textkörper
+        textLabel = new JLabel("Text: ");
+        displayPanel.add(textLabel);
+
+        textText = new JTextField(1000);
+        displayPanel.add(textText);
+        
+        
+        
+   
+              
+// button panel
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        
+
+// Send button 
+        
+        SendButton.addActionListener(this);
+        buttonPanel.add(SendButton);
+
+        
+
+
+// add panels to main panel
+        this.setLayout(new BorderLayout());
+        this.add(displayPanel, BorderLayout.CENTER);
+        this.add(buttonPanel, BorderLayout.SOUTH);
+
+    }
+    public void actionPerformed(ActionEvent e) {
+
+        Object source = e.getSource();
+       
+        if (source == SendButton) {
+        	String sendServer = emailEmpfaengerText.getText();
+        	String recServer =  subjectText.getText();
+        	String name = textText.getText();
+        	System.out.println(emailEmpfaengerText);
         	
             
         }
