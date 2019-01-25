@@ -19,6 +19,7 @@ public class Hauptmenue {
 		JFrame MainFrame = new FrameHaupt();
 	    MainFrame.setVisible(true);
 	    
+	    
 	}
 }	
 		
@@ -189,6 +190,7 @@ class AccPanel extends JPanel implements ActionListener {
     private JLabel emailAbsenderLabel, passwortLabel, sendServerLable, recServerLable, benutzerLable, portLable;
     private JButton OKButton = new JButton("OK");
     
+    
 
     public AccPanel() { // display panel 
         JPanel displayPanel = new JPanel();
@@ -207,9 +209,17 @@ class AccPanel extends JPanel implements ActionListener {
         displayPanel.add(passwortLabel);
         
         passwortText = new JTextField(30);
-        //final JPasswordField passwortText = new JPasswordField(30);
         displayPanel.add(passwortText);
-        
+        //displayPanel.add(passwortText);
+         //JPasswordField passwort = new JPasswordField(30);
+         //passwort.setEchoChar('*');
+        //final JPasswordField passwort = new JPasswordField(20);
+        //passwortLabel.setLabelFor(passwort);
+                          
+         
+					
+				         
+         
         //SMTP
         sendServerLable = new JLabel("SMTP-Server:");
         displayPanel.add(sendServerLable);
@@ -224,7 +234,7 @@ class AccPanel extends JPanel implements ActionListener {
         recServerText = new JTextField(30);
         displayPanel.add(recServerText);
         
-      //Benutzer
+        //Benutzer
         benutzerLable = new JLabel("Benutzer:");
         displayPanel.add(benutzerLable);
         
@@ -268,7 +278,17 @@ class AccPanel extends JPanel implements ActionListener {
         	String sendServer = sendServerText.getText();
         	String recServer =  recServerText.getText();
         	String name = emailAbsenderText.getText();
-        	String pw = passwortText.getText();
+        	String passwort = passwortText.getText();
+        	
+			//String password = new String(passwort.getPassword());
+            //JOptionPane.showMessageDialog(null, "Password is " + password);
+        	
+        	
+        	
+        	
+        	//String pw = new String(pass);
+        	
+        	
         	//String pw = new String(((JPasswordField) passwortText).getPassword()); 
         	//http://www.zentut.com/java-swing/creating-password-field-by-using-jpasswordfield-class/
         	String port = portText.getText();
