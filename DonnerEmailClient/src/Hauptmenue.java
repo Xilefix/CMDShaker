@@ -176,19 +176,26 @@ class AccPanel extends JPanel implements ActionListener {
         emailAbsenderText = new JTextField(30);
         displayPanel.add(emailAbsenderText);
         
-        
+        //Passwort
         passwortLabel = new JLabel("Passwort: ");
         displayPanel.add(passwortLabel);
         
         passwortText = new JTextField(30);
         displayPanel.add(passwortText);
         
+        //SMTP
+        sendServerLable = new JLabel("SMTP-Server:");
+        displayPanel.add(sendServerLable);
         
-        emailAbsenderLabel = new JLabel("E-mail Absender:");
-        displayPanel.add(emailAbsenderLabel);
+        sendServerText = new JTextField(30);
+        displayPanel.add(sendServerText);
         
-        emailAbsenderText = new JTextField(30);
-        displayPanel.add(emailAbsenderText);
+        //POP3
+        recServerLable = new JLabel("POP3-Server: ");
+        displayPanel.add(recServerLable);
+        
+        recServerText = new JTextField(30);
+        displayPanel.add(recServerText);
    
               
 // button panel
