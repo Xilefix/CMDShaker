@@ -220,7 +220,7 @@ class AccPanel extends JPanel implements ActionListener {
         buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         
 
-// Acc button 
+// OK button 
         
         OKButton.addActionListener(this);
         buttonPanel.add(OKButton);
