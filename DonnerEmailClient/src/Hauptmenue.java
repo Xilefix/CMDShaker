@@ -239,7 +239,11 @@ class AccPanel extends JPanel implements ActionListener {
         Object source = e.getSource();
        
         if (source == OKButton) {
-        	//framePass.setVisible(true);
+        	String sendServer = sendServerText.getText();
+        	String recServer =  recServerText.getText();
+        	String name = emailAbsenderText.getText();
+        	String pw = passwortText.getText();
+        	String port = portText.getText();
             
         }
         
