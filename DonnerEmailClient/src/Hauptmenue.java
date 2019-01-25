@@ -205,6 +205,14 @@ class AccPanel extends JPanel implements ActionListener {
         benutzerText = new JTextField(30);
         displayPanel.add(benutzerText);
         
+      //Port
+        portLable = new JLabel("Port: ");
+        displayPanel.add(portLable);
+        
+        portText = new JTextField(30);
+        displayPanel.add(portText);
+        portText.setText("587");
+        
    
               
 // button panel
