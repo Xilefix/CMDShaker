@@ -100,7 +100,7 @@ class AccFrame extends JFrame {
 	
     public AccFrame() {
         setTitle("Acc Info");
-        setSize(400, 800);
+        setSize(350, 400);
         centerWindow(this);
         setResizable(false);
         JPanel panel = new AccPanel();
@@ -209,7 +209,7 @@ class AccPanel extends JPanel implements ActionListener {
         portLable = new JLabel("Port: ");
         displayPanel.add(portLable);
         
-        portText = new JTextField(30);
+        portText = new JTextField(7);
         displayPanel.add(portText);
         portText.setText("587");
         
