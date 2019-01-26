@@ -21,16 +21,26 @@ import javax.net.ssl.*;
 import java.util.Properties;
 
 public class Hauptmenue{
-	
+	public static String sendServer;
+	public static String recServer;
+	public static String name;
+	public static String passwort;
 	
 	public static void main(String[] args) {
+		
+
+    	
+    	
+		
+		
 		JFrame MainFrame = new HauptFrame();
 	    MainFrame.setVisible(true);
 	    
 	    
+	    
 	}
-}
 
+}
 		
 
 
@@ -304,7 +314,7 @@ class AccPanel extends JPanel implements ActionListener {
         this.add(buttonPanel, BorderLayout.SOUTH);
 
     }
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e)  {
 
         Object source = e.getSource();
        
