@@ -7,6 +7,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
@@ -23,16 +25,7 @@ public class Hauptmenue{
 	    
 	}
 }
-/*class Menue extends JMenu { 
-	// Erzeugen des File-Menüs
-			JMenu fileMenu = new JMenu("File");
-			fileMenu.add("neue eMail");
-			fileMenu.add("Empfangen");
-			fileMenu.add("Optionen");
-			fileMenu.add("Beenden");
-	
-	
-}*/
+
 		
 		/*
 		// Erzeugen des File-Menüs
@@ -95,6 +88,30 @@ class FrameHaupt extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JPanel panel = new HauptPanel();
         this.add(panel);
+        JMenuBar menuBar;
+        JMenu menu;
+        JMenuItem menuItem;
+     // Erzeugen des File-Menüs
+        menuBar = new JMenuBar();
+     		menu = new JMenu("File");
+     		menu.setMnemonic(KeyEvent.VK_A);
+     		menu.getAccessibleContext().setAccessibleDescription(
+     		        "The only menu in this program that has menu items");
+     		menuBar.add(menu);
+     		
+     		//JMenuItems
+     		menuItem = new JMenuItem("neue eMail", KeyEvent.VK_T);
+     		menu.add(menuItem);	
+     		menuItem = new JMenuItem("Empfangen", KeyEvent.VK_T);
+     		menu.add(menuItem);
+     		menuItem = new JMenuItem("Optionen", KeyEvent.VK_T);
+     		menu.add(menuItem);
+     		menuItem = new JMenuItem("Beenden", KeyEvent.VK_T);
+     		menu.add(menuItem);
+     		
+     		//set Menubar
+     		setJMenuBar(menuBar);
+
 	}
 	
 	private void centerWindow(Window w) {
