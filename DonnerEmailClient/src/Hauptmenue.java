@@ -219,7 +219,7 @@ class HauptPanel extends JPanel implements ActionListener {
                       
     }
 }
-class AccPanel extends JPanel implements ActionListener {
+/*class AccPanel extends JPanel implements ActionListener {
 	private static JTextField emailAbsenderText, passwortText, sendServerText, recServerText, benutzerText, portText  ;
     private JLabel emailAbsenderLabel, passwortLabel, sendServerLable, recServerLable, benutzerLable, portLable;
     private JButton OKButton = new JButton("OK");
@@ -349,7 +349,7 @@ class AccPanel extends JPanel implements ActionListener {
                       
     
     
-}
+}*/
 class SendPanel extends JPanel implements ActionListener {
 	private JTextField emailEmpfaengerText,  subjectText ;
 	private JTextArea textText;
