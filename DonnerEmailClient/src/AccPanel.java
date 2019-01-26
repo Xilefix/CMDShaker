@@ -13,7 +13,10 @@ public class AccPanel extends JPanel implements ActionListener {
 	private static JTextField emailAbsenderText, passwortText, sendServerText, recServerText, benutzerText, portText  ;
     private JLabel emailAbsenderLabel, passwortLabel, sendServerLable, recServerLable, benutzerLable, portLable;
     private JButton OKButton = new JButton("OK");
-    
+    public String sendServer;
+	public String recServer;
+	public String name;
+	public String passwort;
     
 
     public AccPanel() { // display panel 
@@ -109,10 +112,10 @@ public class AccPanel extends JPanel implements ActionListener {
         Object source = e.getSource();
        
         if (source == OKButton) {
-        	String sendServer = sendServerText.getText();
-        	String recServer =  recServerText.getText();
-        	String name = emailAbsenderText.getText();
-        	String passwort = passwortText.getText();
+        	sendServer = sendServerText.getText();
+        	recServer =  recServerText.getText();
+        	name = emailAbsenderText.getText();
+        	passwort = passwortText.getText();
         	
         	
         		
