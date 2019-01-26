@@ -2,7 +2,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.text.NumberFormat;
-
+import java.util.Arrays;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -210,11 +210,15 @@ class AccPanel extends JPanel implements ActionListener {
         
         passwortText = new JTextField(30);
         displayPanel.add(passwortText);
+        passwortLabel.add(passwortText);
+        
         //displayPanel.add(passwortText);
-         //JPasswordField passwort = new JPasswordField(30);
+        //JPasswordField passwordField;
+        //passwordField = new JPasswordField(30);
+        //passwordField.addActionListener(this);
          //passwort.setEchoChar('*');
         //final JPasswordField passwort = new JPasswordField(20);
-        //passwortLabel.setLabelFor(passwort);
+        
                           
          
 					
@@ -279,7 +283,7 @@ class AccPanel extends JPanel implements ActionListener {
         	String recServer =  recServerText.getText();
         	String name = emailAbsenderText.getText();
         	String passwort = passwortText.getText();
-        	
+        	//char[] input = (JPasswordField)passwordField.getPassword();
 			//String password = new String(passwort.getPassword());
             //JOptionPane.showMessageDialog(null, "Password is " + password);
         	
