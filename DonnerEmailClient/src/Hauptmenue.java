@@ -12,7 +12,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 
-public class Hauptmenue {
+public class Hauptmenue{
 	
 	
 	public static void main(String[] args) {
