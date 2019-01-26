@@ -210,7 +210,7 @@ class HauptPanel extends JPanel implements ActionListener {
     }
 }
 class AccPanel extends JPanel implements ActionListener {
-	private JTextField emailAbsenderText, passwortText, sendServerText, recServerText, benutzerText, portText  ;
+	private static JTextField emailAbsenderText, passwortText, sendServerText, recServerText, benutzerText, portText  ;
     private JLabel emailAbsenderLabel, passwortLabel, sendServerLable, recServerLable, benutzerLable, portLable;
     private JButton OKButton = new JButton("OK");
     
@@ -269,6 +269,12 @@ class AccPanel extends JPanel implements ActionListener {
         benutzerText = new JTextField(30);
         displayPanel.add(benutzerText);
         
+        
+
+        
+        
+        
+        
       //Port
         portLable = new JLabel("Port: ");
         displayPanel.add(portLable);
@@ -307,6 +313,9 @@ class AccPanel extends JPanel implements ActionListener {
         	String recServer =  recServerText.getText();
         	String name = emailAbsenderText.getText();
         	String passwort = passwortText.getText();
+        	
+        	
+        		
         	
         	}
         	//char[] input = (JPasswordField)passwordField.getPassword();
@@ -399,7 +408,7 @@ class SendPanel extends JPanel implements ActionListener {
             String text = textText.getText();
             JOptionPane.showMessageDialog(null, "sendet");
 
-            //ClientSend(sendServer, name,pw, port, emailEmpfaenger, subject, text); 
+            //ClientSend(sendServer, name, pw, port, emailEmpfaenger, subject, text); 
             //xx wie kann ich auf die Variablen aus der anderen Klasse zugreifen?
         }
 
