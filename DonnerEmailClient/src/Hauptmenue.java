@@ -6,6 +6,7 @@ import java.util.Arrays;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
@@ -21,7 +22,17 @@ public class Hauptmenue{
 	    
 	    
 	}
-}	
+}
+/*class Menue extends JMenu { 
+	// Erzeugen des File-Menüs
+			JMenu fileMenu = new JMenu("File");
+			fileMenu.add("neue eMail");
+			fileMenu.add("Empfangen");
+			fileMenu.add("Optionen");
+			fileMenu.add("Beenden");
+	
+	
+}*/
 		
 		/*
 		// Erzeugen des File-Menüs
