@@ -306,7 +306,6 @@ class AccPanel extends JPanel implements ActionListener {
 class SendPanel extends JPanel implements ActionListener {
 	private JTextField emailEmpfaengerText,  subjectText ;
 	private JTextArea textText;
-	
     private JLabel emailEmpfaengerLabel, subjectLabel, textLabel ;
     private JButton SendButton = new JButton("Send");
     
