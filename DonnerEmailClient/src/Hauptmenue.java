@@ -27,56 +27,6 @@ public class Hauptmenue{
 }
 
 		
-		/*
-		// Erzeugen des File-Menüs
-		Menu fileMenu = new Menu("File");
-		fileMenu.add("neue eMail");
-		fileMenu.add("Empfangen");
-		fileMenu.add("Optionen");
-		fileMenu.add("Beenden");
-
-		//Button Acc
-		Button Acc = new Button("Acc");
-		frame.setLayout(new FlowLayout());
-		frame.add(Acc);
-		
-		
-		//Frame für passwort 
-		JFrame framePass;
-		framePass = new JFrame("Acc Info"); 
-		framePass.setSize(1000,800);
-		TextField hello = new TextField("Hello", 1);
-		framePass.add(hello);
-		
-		
-		//action
-		Acc.addActionListener(new ActionListener(){	public void actionPerformed(ActionEvent e) {
-			if ("Acc".equals(e.getActionCommand()));
-			framePass.setVisible(true);
-				
-
-		}});
-		Acc.setActionCommand("Acc");
-
-
-
-		// Erzeugen der Menüleiste und Hinzufügen der Menüs
-		MenuBar myMenuBar = new MenuBar();
-		myMenuBar.add(fileMenu);
-		// Setzen der Menüleiste
-		frame.setMenuBar(myMenuBar);
-
-
-
-
-		}
-	//acc button
-
-	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-
-	}
-	*/
 
 
 class FrameHaupt extends JFrame {
@@ -88,29 +38,29 @@ class FrameHaupt extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JPanel panel = new HauptPanel();
         this.add(panel);
+        
+        // Erzeugen der Menüleiste und Hinzufügen der Menüs
         JMenuBar menuBar;
         JMenu menu;
         JMenuItem menuItem;
-     // Erzeugen des File-Menüs
         menuBar = new JMenuBar();
-     		menu = new JMenu("File");
-     		menu.setMnemonic(KeyEvent.VK_A);
-     		menu.getAccessibleContext().setAccessibleDescription(
-     		        "The only menu in this program that has menu items");
-     		menuBar.add(menu);
+     	menu = new JMenu("File");
+     	menu.setMnemonic(KeyEvent.VK_A);
+     	menu.getAccessibleContext().setAccessibleDescription("Filemenue");
+     	menuBar.add(menu);
      		
-     		//JMenuItems
-     		menuItem = new JMenuItem("neue eMail", KeyEvent.VK_T);
-     		menu.add(menuItem);	
-     		menuItem = new JMenuItem("Empfangen", KeyEvent.VK_T);
-     		menu.add(menuItem);
-     		menuItem = new JMenuItem("Optionen", KeyEvent.VK_T);
-     		menu.add(menuItem);
-     		menuItem = new JMenuItem("Beenden", KeyEvent.VK_T);
-     		menu.add(menuItem);
+     	//JMenuItems
+     	menuItem = new JMenuItem("neue eMail", KeyEvent.VK_T);
+     	menu.add(menuItem);	
+     	menuItem = new JMenuItem("Empfangen", KeyEvent.VK_T);
+     	menu.add(menuItem);
+     	menuItem = new JMenuItem("Optionen", KeyEvent.VK_T);
+     	menu.add(menuItem);
+     	menuItem = new JMenuItem("Beenden", KeyEvent.VK_T);
+     	menu.add(menuItem);
      		
-     		//set Menubar
-     		setJMenuBar(menuBar);
+     	//// Setzen der Menüleiste
+     	setJMenuBar(menuBar);
 
 	}
 	
