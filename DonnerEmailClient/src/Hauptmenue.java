@@ -475,7 +475,7 @@ class SendPanel extends JPanel implements ActionListener {
     }
 
 
-} // acc frame , send frame designed , password evtl noch zeichen ersetzen
+} //  password evtl noch zeichen ersetzen
 
 
 
