@@ -13,7 +13,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-
+import javax.mail.internet.*;
+import javax.mail.*;
+import javax.mail.internet.MimeMessage;
+import javax.net.ssl.*;
+import java.util.Properties;
 
 public class Hauptmenue{
 	
@@ -107,7 +111,7 @@ class SendFrame extends JFrame {
 	
     public SendFrame() {
         setTitle("Send Info");
-        setSize(550, 500);
+        setSize(890, 800);
         centerWindow(this);
         setResizable(false);
         JPanel panel = new SendPanel();
@@ -274,6 +278,8 @@ class AccPanel extends JPanel implements ActionListener {
         	String recServer =  recServerText.getText();
         	String name = emailAbsenderText.getText();
         	String passwort = passwortText.getText();
+        	
+        	}
         	//char[] input = (JPasswordField)passwordField.getPassword();
 			//String password = new String(passwort.getPassword());
             //JOptionPane.showMessageDialog(null, "Password is " + password);
@@ -293,7 +299,7 @@ class AccPanel extends JPanel implements ActionListener {
         }
         
                       
-    }
+    
     
 }
 class SendPanel extends JPanel implements ActionListener {
@@ -356,19 +362,80 @@ class SendPanel extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         Object source = e.getSource();
-       
+
         if (source == SendButton) {
-        	String emailEmpfaenger = emailEmpfaengerText.getText();
-        	String subject =  subjectText.getText();
-        	String text = textText.getText();
-        	System.out.println(emailEmpfaengerText);
-        	JOptionPane.showMessageDialog(null, "sendet");
-        	
-            
+            String emailEmpfaenger = emailEmpfaengerText.getText();
+            String subject =  subjectText.getText();
+            String text = textText.getText();
+            JOptionPane.showMessageDialog(null, "sendet");
+
+            //ClientSend(sendServer, name,pw, port, emailEmpfaenger, subject, text); 
+            //xx wie kann ich auf die Variablen aus der anderen Klasse zugreifen?
         }
-        
-                      
+
+
     }
+
+    public static void ClientSend(String server,String name,String pw,String port,String emailEmpfaenger,String subject, String messageText) {
+        	try {
+
+            int i=1,c=0;
+
+            String[] rcpt = {emailEmpfaenger};
+
+            boolean sessionDebug = false;
+
+
+            Properties props = System.getProperties();
+
+
+            props.setProperty("mail.smtp.host", server);
+            props.setProperty("mail.smtp.port",port);
+            props.setProperty("mail.smtp.auth","true");
+            if(port=="587") {
+            props.setProperty("mail.smtp.starttls.enable","true");
+            props.setProperty("mail.smtp.starttls.required","true");
+            }
+            else {
+            props.setProperty("mail.smtp.starttls.enable","false");
+            props.setProperty("mail.smtp.starttls.required","false");
+            }
+            //java.security.Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider() );
+
+            Session emailSession = Session.getDefaultInstance(props);
+            emailSession.setDebug(sessionDebug);
+            Message msg = new MimeMessage(emailSession);
+            msg.setFrom(new InternetAddress(name));
+
+
+
+            InternetAddress[] address = new InternetAddress[rcpt.length];
+            for (i = 0; i <= rcpt.length-1; i++)
+                address[i] = new InternetAddress(rcpt[i]);
+
+            msg.setRecipients(Message.RecipientType.TO,address);
+            msg.setSubject(subject);
+            msg.setText(messageText);
+
+            Transport transport = emailSession.getTransport("smtp");
+            transport.connect(server,name,pw);
+            transport.sendMessage(msg, msg.getAllRecipients());
+
+
+            JOptionPane.showMessageDialog(null, "Die Nachricht wurde verschickt.");
+
+            transport.close();
+
+
+        }catch(NoSuchProviderException nspe) {
+            nspe.printStackTrace();
+        }catch(MessagingException me) {
+            me.printStackTrace();
+        }
+
+    }
+
+
 } // acc frame , send frame designed , password evtl noch zeichen ersetzen
 
 
