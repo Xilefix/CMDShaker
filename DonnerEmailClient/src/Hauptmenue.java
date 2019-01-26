@@ -12,6 +12,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.mail.internet.*;
 import javax.mail.*;
@@ -111,7 +112,7 @@ class SendFrame extends JFrame {
 	
     public SendFrame() {
         setTitle("Send Info");
-        setSize(890, 800);
+        setSize(890, 600);
         centerWindow(this);
         setResizable(false);
         JPanel panel = new SendPanel();
@@ -303,7 +304,9 @@ class AccPanel extends JPanel implements ActionListener {
     
 }
 class SendPanel extends JPanel implements ActionListener {
-	private JTextField emailEmpfaengerText,  subjectText, textText;
+	private JTextField emailEmpfaengerText,  subjectText ;
+	private JTextArea textText;
+	
     private JLabel emailEmpfaengerLabel, subjectLabel, textLabel ;
     private JButton SendButton = new JButton("Send");
     
@@ -333,7 +336,7 @@ class SendPanel extends JPanel implements ActionListener {
         textLabel = new JLabel("Text: ");
         displayPanel.add(textLabel);
 
-        textText = new JTextField(1000);
+        textText = new JTextArea(30,75);
         displayPanel.add(textText);
         
         
