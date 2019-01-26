@@ -29,7 +29,7 @@ public class Hauptmenue{
 		
 
 
-class FrameHaupt extends JFrame {
+class FrameHaupt extends JFrame implements ActionListener{
 	public FrameHaupt() {
 		setTitle("DonnerEmailClient");
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
@@ -51,11 +51,14 @@ class FrameHaupt extends JFrame {
      		
      	//JMenuItems
      	menuItem = new JMenuItem("neue eMail", KeyEvent.VK_T);
-     	menu.add(menuItem);	
+     	menu.add(menuItem);
+     	menuItem.addActionListener(this);
      	menuItem = new JMenuItem("Empfangen", KeyEvent.VK_T);
      	menu.add(menuItem);
+     	menuItem.addActionListener(this);
      	menuItem = new JMenuItem("Optionen", KeyEvent.VK_T);
      	menu.add(menuItem);
+     	menuItem.addActionListener(this);
      	menuItem = new JMenuItem("Beenden", KeyEvent.VK_T);
      	menu.add(menuItem);
      		
@@ -69,6 +72,16 @@ class FrameHaupt extends JFrame {
         Dimension d = tk.getScreenSize();
         setLocation((d.width - w.getWidth()) / 2, (d.height - w.getHeight()) / 2);
     }
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object source = e.getSource();
+		
+		//if (source == ) {
+		//	System.out.println("neue Email");
+		//}
+		
+	}
 	
 }
 
