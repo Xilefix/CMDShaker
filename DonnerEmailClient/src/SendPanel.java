@@ -23,8 +23,10 @@ public class SendPanel extends JPanel implements ActionListener {
 	private JTextArea textText;
     private JLabel emailEmpfaengerLabel, subjectLabel, textLabel ;
     private JButton SendButton = new JButton("Send");
+    public String emailEmpfaenger, subject, text;
     
-
+    
+    
     public SendPanel() { // display panel 
         JPanel displayPanel = new JPanel();
         displayPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -81,9 +83,9 @@ public class SendPanel extends JPanel implements ActionListener {
         Object source = e.getSource();
 
         if (source == SendButton) {
-            String emailEmpfaenger = emailEmpfaengerText.getText();
-            String subject =  subjectText.getText();
-            String text = textText.getText();
+            emailEmpfaenger = emailEmpfaengerText.getText();
+            subject =  subjectText.getText();
+            text = textText.getText();
             JOptionPane.showMessageDialog(null, "sendet");
 
             //ClientSend(sendServer, name, pw, port, emailEmpfaenger, subject, text); 
