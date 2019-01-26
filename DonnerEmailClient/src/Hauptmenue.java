@@ -24,7 +24,7 @@ public class Hauptmenue{
 	
 	
 	public static void main(String[] args) {
-		JFrame MainFrame = new FrameHaupt();
+		JFrame MainFrame = new HauptFrame();
 	    MainFrame.setVisible(true);
 	    
 	    
@@ -34,8 +34,8 @@ public class Hauptmenue{
 		
 
 
-class FrameHaupt extends JFrame implements ActionListener{
-	public FrameHaupt() {
+class HauptFrame extends JFrame implements ActionListener{
+	public HauptFrame() {
 		setTitle("DonnerEmailClient");
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 		this.setSize(d);
@@ -55,21 +55,50 @@ class FrameHaupt extends JFrame implements ActionListener{
      	menuBar.add(menu);
      		
      	//JMenuItems
-     	menuItem = new JMenuItem("neue eMail", KeyEvent.VK_T);
-     	menu.add(menuItem);
-     	menuItem.addActionListener(this);
-     	menuItem = new JMenuItem("Empfangen", KeyEvent.VK_T);
-     	menu.add(menuItem);
-     	menuItem.addActionListener(this);
-     	menuItem = new JMenuItem("Optionen", KeyEvent.VK_T);
-     	menu.add(menuItem);
-     	menuItem.addActionListener(this);
-     	menuItem = new JMenuItem("Beenden", KeyEvent.VK_T);
-     	menu.add(menuItem);
-     		
+     	JMenuItem neueEMail= new JMenuItem("neue eMail", KeyEvent.VK_T);
+     	menu.add(neueEMail);
+     	neueEMail.addActionListener(this);
+     	JMenuItem Empfangen = new JMenuItem("Empfangen", KeyEvent.VK_T);
+     	menu.add(Empfangen);
+     	Empfangen.addActionListener(this);
+     	JMenuItem Optionen = new JMenuItem("Optionen", KeyEvent.VK_T);
+     	menu.add(Optionen);
+     	Optionen.addActionListener(this);
+     	JMenuItem Beenden = new JMenuItem("Beenden", KeyEvent.VK_T);
+     	menu.add(Beenden);
+     	
+     	
+     	
+     	
      	//// Setzen der Menüleiste
      	setJMenuBar(menuBar);
 
+     	class Aktion implements ActionListener{
+     	public void actionPerformed(ActionEvent e) {
+    		Object source = e.getSource();
+    		
+    		if (source == neueEMail) {
+    			JFrame SendFrame = new SendFrame();
+        	    SendFrame.setVisible(true);
+    		}
+    		if (source == Empfangen) {
+    			JOptionPane.showMessageDialog(null, "Empfangen.");
+    		}
+    		if (source == Optionen) {
+    			JOptionPane.showMessageDialog(null, "Optionen.");
+    		}
+    		if (source == Beenden) {
+    			
+    			System.exit(0);
+    		}
+    		
+    		
+    	}
+     	}
+     	neueEMail.addActionListener(new Aktion());
+     	Empfangen.addActionListener(new Aktion());
+     	Optionen.addActionListener(new Aktion());
+     	Beenden.addActionListener(new Aktion());
 	}
 	
 	private void centerWindow(Window w) {
@@ -80,13 +109,12 @@ class FrameHaupt extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		Object source = e.getSource();
-		
-		//if (source == ) {
-		//	System.out.println("neue Email");
-		//}
+		// TODO Auto-generated method stub
 		
 	}
+
+	
+	
 	
 }
 
