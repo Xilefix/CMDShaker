@@ -57,13 +57,13 @@ class HauptFrame extends JFrame implements ActionListener{
      	//JMenuItems
      	JMenuItem neueEMail= new JMenuItem("neue eMail", KeyEvent.VK_T);
      	menu.add(neueEMail);
-     	neueEMail.addActionListener(this);
+     	
      	JMenuItem Empfangen = new JMenuItem("Empfangen", KeyEvent.VK_T);
      	menu.add(Empfangen);
-     	Empfangen.addActionListener(this);
+     	
      	JMenuItem Optionen = new JMenuItem("Optionen", KeyEvent.VK_T);
      	menu.add(Optionen);
-     	Optionen.addActionListener(this);
+     	
      	JMenuItem Beenden = new JMenuItem("Beenden", KeyEvent.VK_T);
      	menu.add(Beenden);
      	
