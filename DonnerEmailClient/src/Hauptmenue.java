@@ -87,6 +87,7 @@ class HauptFrame extends JFrame implements ActionListener{
      	final JMenuItem Beenden = new JMenuItem("Beenden", KeyEvent.VK_T);
      	menu.add(Beenden);
      	
+     	//Filemenuitem größe
      	neueEMail.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
      	Empfangen.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
      	Optionen.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
