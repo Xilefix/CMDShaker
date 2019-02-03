@@ -30,7 +30,6 @@ public class AccPanel extends JPanel implements ActionListener {
     public String sendServer= "";
 	public String recServer= "";
 	public String name= "";
-	public String pass = "";//x
 	public String passwort= "";
 	public String smtpport= "";//x
 	public String pop3port= "";
