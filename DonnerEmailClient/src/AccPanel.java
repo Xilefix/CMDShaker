@@ -158,7 +158,7 @@ public class AccPanel extends JPanel implements ActionListener {
         	
         	
         	File mailAcc=new File("C:\\Users\\Public"+"\\acc.txt");		//Windows
-        	//File mailAcc=new File("C:\\Users\\Public"+"\\acc.txt");  //Linux
+        	//File mailAcc=new File("C:\/Users\/Public"+"\/acc.txt");  //Linux
         											
 			try {
 			    BufferedWriter writer = new BufferedWriter(new FileWriter(mailAcc));	//Meldung "The local variable mailAcc may not have been initialized" ignorieren
