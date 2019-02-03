@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,11 +27,14 @@ public class HauptPanel extends JPanel implements ActionListener {
 // Acc button 
         
         AccButton.addActionListener(this);
+        AccButton.setPreferredSize(new Dimension(100,100));
         buttonPanel.add(AccButton);
+        
 
 // send button 
         
         SendButton.addActionListener(this);
+        SendButton.setPreferredSize(new Dimension(100,100));
         buttonPanel.add(SendButton);
         
 

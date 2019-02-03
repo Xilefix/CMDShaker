@@ -2,6 +2,11 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -32,8 +37,8 @@ public class SendPanel extends JPanel implements ActionListener {
         displayPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         
         //Labels
-      //EmailEmpfänger
-        emailEmpfaengerLabel = new JLabel("Empfänger-Adressen(durch , getrennt:");
+      //EmailEmpf�nger
+        emailEmpfaengerLabel = new JLabel("Empf�nger-Adressen(durch , getrennt:");
         displayPanel.add(emailEmpfaengerLabel);
 
         emailEmpfaengerText = new JTextField(80);
@@ -48,7 +53,7 @@ public class SendPanel extends JPanel implements ActionListener {
         displayPanel.add(subjectText);
 
 
-        //Textkörper
+        //Textk�rper
         textLabel = new JLabel("Text: ");
         displayPanel.add(textLabel);
 
@@ -86,17 +91,17 @@ public class SendPanel extends JPanel implements ActionListener {
             emailEmpfaenger = emailEmpfaengerText.getText();
             subject =  subjectText.getText();
             text = textText.getText();
-            JOptionPane.showMessageDialog(null, "sendet");
+            JOptionPane.showMessageDialog(null, "Bitte warten es sendet");
 
-            //ClientSend(sendServer, name, pw, port, emailEmpfaenger, subject, text); 
+            ClientSend( emailEmpfaenger, subject, text); 
             //xx wie kann ich auf die Variablen aus der anderen Klasse zugreifen?
         }
 
 
     }
 
-    public static void ClientSend(String server,String name,String pw,String port,String emailEmpfaenger,String subject, String messageText) {
-        	try {
+    public static void ClientSend(String emailEmpfaenger,String subject, String messageText) {
+        	try {//String server,String name,String pw,String port,
 
             int i=1,c=0;
 
@@ -104,6 +109,21 @@ public class SendPanel extends JPanel implements ActionListener {
 
             boolean sessionDebug = false;
 
+            
+        		
+        	BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\acc.txt"));
+        	String in = read.readLine();        			
+        			
+        	String[] line = in.split(";");  			
+        	String server=line[0];
+        	String name = line[2];
+        	String pw=line[3];
+        	String port=line[4];
+        	
+        	System.out.println(server+ name+ pw+ port);
+        	read.close();
+        		
+        		
 
             Properties props = System.getProperties();
 
@@ -150,8 +170,9 @@ public class SendPanel extends JPanel implements ActionListener {
             nspe.printStackTrace();
         }catch(MessagingException me) {
             me.printStackTrace();
-        }
-
+        }catch (Exception e) {
+    		e.printStackTrace();
+    	}
     }
 
 

@@ -54,14 +54,24 @@ class HauptFrame extends JFrame implements ActionListener{
 		JPanel panel = new HauptPanel();
         this.add(panel);
         
+        //Schriftgröße und Art
+        String Schriftyp ="Calibri"; 
+     	int Schriftgr = 18; //x
+        
         // Erzeugen der Menüleiste und Hinzufügen der Menüs
         JMenuBar menuBar;
         JMenu menu;
         JMenuItem menuItem;
         menuBar = new JMenuBar();
      	menu = new JMenu("File");
+     	
+     	menu.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+     	
      	menu.setMnemonic(KeyEvent.VK_A);
      	menu.getAccessibleContext().setAccessibleDescription("Filemenue");
+     	menu.setPreferredSize(new Dimension(50,40));//x
+     	
+     	
      	menuBar.add(menu);
      		
      	//JMenuItems
@@ -77,6 +87,10 @@ class HauptFrame extends JFrame implements ActionListener{
      	final JMenuItem Beenden = new JMenuItem("Beenden", KeyEvent.VK_T);
      	menu.add(Beenden);
      	
+     	neueEMail.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+     	Empfangen.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+     	Optionen.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+     	Beenden.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));//x
      	
      	
      	
