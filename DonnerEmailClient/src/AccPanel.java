@@ -1,7 +1,12 @@
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -10,13 +15,15 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class AccPanel extends JPanel implements ActionListener {
-	private static JTextField emailAbsenderText, passwortText, sendServerText, recServerText, benutzerText, portText  ;
-    private JLabel emailAbsenderLabel, passwortLabel, sendServerLable, recServerLable, benutzerLable, portLable;
+	private static JTextField emailAbsenderText, passwortText, sendServerText, recServerText, benutzerText, portText ;
+    private JLabel emailAbsenderLabel, passwortLabel, sendServerLabel, recServerLabel, benutzerLabel, portLabel;
     private JButton OKButton = new JButton("OK");
     public String sendServer;
 	public String recServer;
 	public String name;
 	public String passwort;
+	public String port;
+	
     
 
     public AccPanel() { // display panel 
@@ -52,22 +59,22 @@ public class AccPanel extends JPanel implements ActionListener {
 				         
          
         //SMTP
-        sendServerLable = new JLabel("SMTP-Server:");
-        displayPanel.add(sendServerLable);
+        sendServerLabel = new JLabel("SMTP-Server:");
+        displayPanel.add(sendServerLabel);
         
         sendServerText = new JTextField(30);
         displayPanel.add(sendServerText);
         
         //POP3
-        recServerLable = new JLabel("POP3-Server: ");
-        displayPanel.add(recServerLable);
+        recServerLabel = new JLabel("POP3-Server: ");
+        displayPanel.add(recServerLabel);
         
         recServerText = new JTextField(30);
         displayPanel.add(recServerText);
         
         //Benutzer
-        benutzerLable = new JLabel("Benutzer:");
-        displayPanel.add(benutzerLable);
+        benutzerLabel = new JLabel("Benutzer:");
+        displayPanel.add(benutzerLabel);
         
         benutzerText = new JTextField(30);
         displayPanel.add(benutzerText);
@@ -78,22 +85,20 @@ public class AccPanel extends JPanel implements ActionListener {
         
         
         
-      //Port
-        portLable = new JLabel("Port: ");
-        displayPanel.add(portLable);
+        //Port
+        portLabel = new JLabel("Port: ");
+        displayPanel.add(portLabel);
         
         portText = new JTextField(7);
         displayPanel.add(portText);
-        portText.setText("587");
-        
-   
+        portText.setText("587");   
               
-// button panel
+        // button panel
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         
 
-// OK button 
+        // OK button 
         
         OKButton.addActionListener(this);
         buttonPanel.add(OKButton);
@@ -116,8 +121,28 @@ public class AccPanel extends JPanel implements ActionListener {
         	recServer =  recServerText.getText();
         	name = emailAbsenderText.getText();
         	passwort = passwortText.getText();
+        	port = portText.getText();
         	
         	
+        	File mailAcc=new File("C:\\Users\\Public"+"\\acc.txt");
+        	
+        											
+			try {
+			    BufferedWriter writer = new BufferedWriter(new FileWriter(mailAcc));	//Meldung "The local variable mailAcc may not have been initialized" ignorieren
+			    
+			    writer.write(sendServer+ ";"); 
+			    writer.write(recServer+ ";");	
+			    writer.write(name+ ";");
+			    writer.write(passwort+ ";");
+			    writer.write(port+ ";");
+			    
+			    
+				writer.newLine(); // <-----------------
+				writer.close();
+			}
+			catch (IOException e1) {
+			e1.printStackTrace();
+			}
         		
         	
         	}
@@ -133,13 +158,11 @@ public class AccPanel extends JPanel implements ActionListener {
         	
         	//String pw = new String(((JPasswordField) passwortText).getPassword()); 
         	//http://www.zentut.com/java-swing/creating-password-field-by-using-jpasswordfield-class/
-        	String port = portText.getText();
+        	
         	JOptionPane.showMessageDialog(null, "Gesichert");
         	
             
         }
         
-                      
-    
-    
+  
 }
