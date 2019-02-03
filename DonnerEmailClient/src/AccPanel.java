@@ -115,7 +115,7 @@ public class AccPanel extends JPanel implements ActionListener {
         
         pop3portText = new JTextField(7);
         displayPanel.add(pop3portText);
-        pop3portText.setText("587");
+        pop3portText.setText("110");
         pop3portText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
               
         // button panel
