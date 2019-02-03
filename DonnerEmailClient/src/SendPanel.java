@@ -91,7 +91,7 @@ public class SendPanel extends JPanel implements ActionListener {
             emailEmpfaenger = emailEmpfaengerText.getText();
             subject =  subjectText.getText();
             text = textText.getText();
-            JOptionPane.showMessageDialog(null, "Bitte warten es sendet");
+            JOptionPane.showMessageDialog(null, "Bitte warten es sendet");//x
 
             ClientSend( emailEmpfaenger, subject, text); 
             //xx wie kann ich auf die Variablen aus der anderen Klasse zugreifen?
@@ -120,7 +120,7 @@ public class SendPanel extends JPanel implements ActionListener {
         	String pw=line[3];
         	String port=line[4];
         	
-        	System.out.println(server+ name+ pw+ port);
+        	
         	read.close();
         		
         		
