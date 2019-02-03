@@ -209,17 +209,7 @@ public class AccPanel extends JPanel implements ActionListener {
         		
         	
         	}
-        	//char[] input = (JPasswordField)passwordField.getPassword();
-			//String password = new String(passwort.getPassword());
-            //JOptionPane.showMessageDialog(null, "Password is " + password);
-        	
-        	
-        	
-        	
-        	//String pw = new String(pass);
-        	
-        	
-        	//String pw = new String(((JPasswordField) passwortText).getPassword()); 
+        	 
         	//http://www.zentut.com/java-swing/creating-password-field-by-using-jpasswordfield-class/
         	
         	JOptionPane.showMessageDialog(null, "Gesichert");
