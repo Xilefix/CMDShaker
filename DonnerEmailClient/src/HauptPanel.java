@@ -1,6 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,9 +10,16 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class HauptPanel extends JPanel implements ActionListener {
-
-    private JButton AccButton = new JButton("Acc");
+	//Schriftgröße und Art
+    String Schriftyp ="Calibri"; 
+ 	int Schriftgr = 20; //x
+	
+	
+	
+    private JButton AccButton = new JButton("Account");
     private JButton SendButton = new JButton("Senden");
+    
+    
     
 
     public HauptPanel() { // display panel 
@@ -27,14 +35,16 @@ public class HauptPanel extends JPanel implements ActionListener {
 // Acc button 
         
         AccButton.addActionListener(this);
-        AccButton.setPreferredSize(new Dimension(100,100));
+        AccButton.setPreferredSize(new Dimension(150,150));
+        AccButton.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         buttonPanel.add(AccButton);
         
 
 // send button 
         
         SendButton.addActionListener(this);
-        SendButton.setPreferredSize(new Dimension(100,100));
+        SendButton.setPreferredSize(new Dimension(150,150));
+        SendButton.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         buttonPanel.add(SendButton);
         
 

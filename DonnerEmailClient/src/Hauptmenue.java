@@ -56,7 +56,7 @@ class HauptFrame extends JFrame implements ActionListener{
         
         //Schriftgröße und Art
         String Schriftyp ="Calibri"; 
-     	int Schriftgr = 18; //x
+     	int Schriftgr = 20; //x
         
         // Erzeugen der Menüleiste und Hinzufügen der Menüs
         JMenuBar menuBar;
