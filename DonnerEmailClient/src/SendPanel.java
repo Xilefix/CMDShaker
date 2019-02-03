@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -24,6 +25,11 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class SendPanel extends JPanel implements ActionListener {
+	//Schriftgröße und Art
+    String Schriftyp ="Calibri"; 
+ 	int Schriftgr = 20; //x
+	
+ 	//Variablen
 	private JTextField emailEmpfaengerText,  subjectText ;
 	private JTextArea textText;
     private JLabel emailEmpfaengerLabel, subjectLabel, textLabel ;
@@ -37,12 +43,13 @@ public class SendPanel extends JPanel implements ActionListener {
         displayPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         
         //Labels
-      //EmailEmpf�nger
+      //EmailEmpfänger
         emailEmpfaengerLabel = new JLabel("Empf�nger-Adressen(durch , getrennt:");
         displayPanel.add(emailEmpfaengerLabel);
 
         emailEmpfaengerText = new JTextField(80);
         displayPanel.add(emailEmpfaengerText);
+        emailEmpfaengerText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
 
 
         //Betreff
@@ -51,15 +58,16 @@ public class SendPanel extends JPanel implements ActionListener {
 
         subjectText = new JTextField(80);
         displayPanel.add(subjectText);
+        subjectText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
 
 
-        //Textk�rper
+        //Textkörper
         textLabel = new JLabel("Text: ");
         displayPanel.add(textLabel);
 
         textText = new JTextArea(30,75);
         displayPanel.add(textText);
-        
+        textText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         
    

@@ -21,6 +21,7 @@ public class AccPanel extends JPanel implements ActionListener {
     String Schriftyp ="Calibri"; 
  	int Schriftgr = 20; //x
 	
+ 	//Variablen
 	private static JTextField emailAbsenderText, passwortText, sendServerText, recServerText, benutzerText, smtpportText, pop3portText ;
     private JLabel emailAbsenderLabel, passwortLabel, sendServerLabel, recServerLabel, benutzerLabel, smtpportLabel, pop3portLabel;
     private JButton OKButton = new JButton("OK");

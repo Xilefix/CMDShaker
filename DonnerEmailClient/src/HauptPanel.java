@@ -15,7 +15,7 @@ public class HauptPanel extends JPanel implements ActionListener {
  	int Schriftgr = 20; //x
 	
 	
-	
+	//Buttons
     private JButton AccButton = new JButton("Account");
     private JButton SendButton = new JButton("Senden");
     
