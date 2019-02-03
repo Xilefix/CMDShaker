@@ -58,9 +58,9 @@ public class AccPanel extends JPanel implements ActionListener {
         
         passwortText = new JTextField(30);
         displayPanel.add(passwortText);
-        //passwortText.setText("Felix#jena1");//x
+        passwortText.setText("Felix#jena1");//x
         passwortText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));//x
-        //passwortText.setEchoChar('*');
+        //((JPasswordField) passwortText).setEchoChar('*');
         //passwortLabel.add(passwortText);
         
         //displayPanel.add(passwortText);
