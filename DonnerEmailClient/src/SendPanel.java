@@ -109,7 +109,7 @@ public class SendPanel extends JPanel implements ActionListener {
             JOptionPane.showMessageDialog(null, "Bitte warten es sendet");//x
 
             ClientSend( emailEmpfaenger, subject, text); 
-            //xx wie kann ich auf die Variablen aus der anderen Klasse zugreifen?
+            
         }
 
 
