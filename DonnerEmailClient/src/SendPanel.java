@@ -47,6 +47,7 @@ public class SendPanel extends JPanel implements ActionListener {
       //EmailEmpfänger
         emailEmpfaengerLabel = new JLabel("Empfaenger-Adressen(durch , getrennt):");
         displayPanel.add(emailEmpfaengerLabel);
+        emailEmpfaengerLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
 
         emailEmpfaengerText = new JTextField(80);
         displayPanel.add(emailEmpfaengerText);
@@ -57,6 +58,7 @@ public class SendPanel extends JPanel implements ActionListener {
         //Betreff
         subjectLabel = new JLabel("Betreff: ");
         displayPanel.add(subjectLabel);
+        subjectLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
 
         subjectText = new JTextField(80);
         displayPanel.add(subjectText);
@@ -66,6 +68,7 @@ public class SendPanel extends JPanel implements ActionListener {
         //Textkörper
         textLabel = new JLabel("Text: ");
         displayPanel.add(textLabel);
+        textLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
 
         textText = new JTextArea(30,75);
         displayPanel.add(textText);
