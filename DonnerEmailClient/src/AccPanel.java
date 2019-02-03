@@ -165,7 +165,10 @@ public class AccPanel extends JPanel implements ActionListener {
 
         Object source = e.getSource();
         if (source == ZeigePasswort) {
-        	
+        	if(ZeigePasswort.isSelected())
+        	passwortText.setEchoChar((char)0);
+        	else
+        	passwortText.setEchoChar('*');
         	
         }
         if (source == OKButton) {
@@ -207,12 +210,12 @@ public class AccPanel extends JPanel implements ActionListener {
 			e1.printStackTrace();
 			}
         		
-        	
+			JOptionPane.showMessageDialog(null, "Gesichert");
         	}
         	 
         	//http://www.zentut.com/java-swing/creating-password-field-by-using-jpasswordfield-class/
         	
-        	JOptionPane.showMessageDialog(null, "Gesichert");
+        	
         	
             
         }
