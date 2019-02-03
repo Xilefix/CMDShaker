@@ -11,6 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -27,6 +28,7 @@ public class AccPanel extends JPanel implements ActionListener {
     private JLabel emailAbsenderLabel, passwortLabel, sendServerLabel, recServerLabel, benutzerLabel, smtpportLabel, pop3portLabel;
     private static JPasswordField passwortText;
     private JButton OKButton = new JButton("OK");
+    private JCheckBox ZeigePasswort = new JCheckBox("Passwort anzeigen");
     public String sendServer= "";
 	public String recServer= "";
 	public String name= "";
@@ -59,7 +61,7 @@ public class AccPanel extends JPanel implements ActionListener {
         passwortLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         
-        passwortText = new JPasswordField(10);
+        passwortText = new JPasswordField(30);
         passwortText.setEchoChar('*');
         
         /*passwortText = new JTextField(30);*/
@@ -143,6 +145,12 @@ public class AccPanel extends JPanel implements ActionListener {
         OKButton.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         OKButton.setPreferredSize(new Dimension(100,100));//x
         buttonPanel.add(OKButton);
+        
+     // Checkbox Passwort anzeigen 
+        ZeigePasswort.addActionListener(this);
+        ZeigePasswort.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+        ZeigePasswort.setPreferredSize(new Dimension(100,100));//x
+        buttonPanel.add(ZeigePasswort);
 
         
 
@@ -156,7 +164,10 @@ public class AccPanel extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e)  {
 
         Object source = e.getSource();
-       
+        if (source == ZeigePasswort) {
+        	
+        	
+        }
         if (source == OKButton) {
         	sendServer = sendServerText.getText();
         	recServer =  recServerText.getText();
@@ -166,7 +177,7 @@ public class AccPanel extends JPanel implements ActionListener {
         	for (int x = 0; x< pass.length; x++) {
         		passwort+=pass[x];
         	}
-        	passwortText.setEchoChar((char)0);
+        	//passwortText.setEchoChar((char)0);
         	
         	
         	//passwort = passwortText.getText();
