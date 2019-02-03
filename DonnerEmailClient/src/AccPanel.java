@@ -1,5 +1,6 @@
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -125,6 +126,8 @@ public class AccPanel extends JPanel implements ActionListener {
         // OK button 
         
         OKButton.addActionListener(this);
+        OKButton.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+        OKButton.setPreferredSize(new Dimension(100,100));//x
         buttonPanel.add(OKButton);
 
         
