@@ -47,6 +47,7 @@ public class AccPanel extends JPanel implements ActionListener {
         
         emailAbsenderText = new JTextField(30);
         displayPanel.add(emailAbsenderText);
+        emailAbsenderText.setText("unijena123@firemail.de");//x
         emailAbsenderText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         //Passwort
@@ -76,6 +77,7 @@ public class AccPanel extends JPanel implements ActionListener {
         
         sendServerText = new JTextField(30);
         displayPanel.add(sendServerText);
+        sendServerText.setText("smtp.firemail.de");//x
         sendServerText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         //POP3
@@ -84,6 +86,7 @@ public class AccPanel extends JPanel implements ActionListener {
                 
         recServerText = new JTextField(30);
         displayPanel.add(recServerText);
+        recServerText.setText("pop3.firemail.de");//x
         recServerText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         //Benutzer
@@ -92,6 +95,7 @@ public class AccPanel extends JPanel implements ActionListener {
         
         benutzerText = new JTextField(30);
         displayPanel.add(benutzerText);
+        benutzerText.setText("unijena123@firemail.de");//x
         benutzerText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         

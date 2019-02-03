@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -44,11 +45,12 @@ public class SendPanel extends JPanel implements ActionListener {
         
         //Labels
       //EmailEmpfänger
-        emailEmpfaengerLabel = new JLabel("Empf�nger-Adressen(durch , getrennt:");
+        emailEmpfaengerLabel = new JLabel("Empfaenger-Adressen(durch , getrennt):");
         displayPanel.add(emailEmpfaengerLabel);
 
         emailEmpfaengerText = new JTextField(80);
         displayPanel.add(emailEmpfaengerText);
+        emailEmpfaengerText.setText("Felix.liesendahl@web.de");//x
         emailEmpfaengerText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
 
 
@@ -81,6 +83,8 @@ public class SendPanel extends JPanel implements ActionListener {
         
         SendButton.addActionListener(this);
         buttonPanel.add(SendButton);
+        SendButton.setPreferredSize(new Dimension(150,150));
+        SendButton.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
 
         
 
