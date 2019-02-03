@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class AccPanel extends JPanel implements ActionListener {
@@ -22,15 +23,17 @@ public class AccPanel extends JPanel implements ActionListener {
  	int Schriftgr = 20; //x
 	
  	//Variablen
-	private static JTextField emailAbsenderText, passwortText, sendServerText, recServerText, benutzerText, smtpportText, pop3portText ;
+	private static JTextField emailAbsenderText, sendServerText, recServerText, benutzerText, smtpportText, pop3portText ;
     private JLabel emailAbsenderLabel, passwortLabel, sendServerLabel, recServerLabel, benutzerLabel, smtpportLabel, pop3portLabel;
+    private static JPasswordField passwortText;
     private JButton OKButton = new JButton("OK");
-    public String sendServer;
-	public String recServer;
-	public String name;
-	public String passwort;
-	public String smtpport;//x
-	public String pop3port;
+    public String sendServer= "";
+	public String recServer= "";
+	public String name= "";
+	public String pass = "";//x
+	public String passwort= "";
+	public String smtpport= "";//x
+	public String pop3port= "";
 	
 
 	
@@ -56,10 +59,15 @@ public class AccPanel extends JPanel implements ActionListener {
         displayPanel.add(passwortLabel);
         passwortLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
-        passwortText = new JTextField(30);
+        
+        passwortText = new JPasswordField(10);
+        passwortText.setEchoChar('*');
+        
+        /*passwortText = new JTextField(30);*/
         displayPanel.add(passwortText);
         passwortText.setText("Felix#jena1");//x
         passwortText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));//x
+        
         
        
         
@@ -154,9 +162,18 @@ public class AccPanel extends JPanel implements ActionListener {
         	sendServer = sendServerText.getText();
         	recServer =  recServerText.getText();
         	name = emailAbsenderText.getText();
-        	passwort = passwortText.getText();
+        	
+        	char [] pass = passwortText.getPassword();
+        	for (int x = 0; x< pass.length; x++) {
+        		passwort+=pass[x];
+        	}
+        	passwortText.setEchoChar((char)0);
+        	
+        	
+        	//passwort = passwortText.getText();
         	smtpport = smtpportText.getText();
         	pop3port = pop3portText.getText();
+        	
         	
         	
         	File mailAcc=new File("C:\\Users\\Public"+"\\acc.txt");		//Windows
