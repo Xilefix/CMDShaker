@@ -149,7 +149,7 @@ public class AccPanel extends JPanel implements ActionListener {
      // Checkbox Passwort anzeigen 
         ZeigePasswort.addActionListener(this);
         ZeigePasswort.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
-        ZeigePasswort.setPreferredSize(new Dimension(100,100));//x
+        ZeigePasswort.setPreferredSize(new Dimension(200,200));//x
         buttonPanel.add(ZeigePasswort);
 
         
