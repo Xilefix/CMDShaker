@@ -147,7 +147,7 @@ class AccFrame extends JFrame {
 	
     public AccFrame() {
         setTitle("Acc Info");
-        setSize(350, 400);
+        setSize(550, 600);
         centerWindow(this);
         setResizable(false);
         JPanel panel = new AccPanel();

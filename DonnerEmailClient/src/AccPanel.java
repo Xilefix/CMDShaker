@@ -27,7 +27,7 @@ public class AccPanel extends JPanel implements ActionListener {
 	public String recServer;
 	public String name;
 	public String passwort;
-	public String smtpport;
+	public String smtpport;//x
 	public String pop3port;
 	
 
@@ -53,7 +53,7 @@ public class AccPanel extends JPanel implements ActionListener {
         
         passwortText = new JTextField(30);
         displayPanel.add(passwortText);
-        passwortText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+        passwortText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));//x
         //passwortLabel.add(passwortText);
         
         //displayPanel.add(passwortText);
