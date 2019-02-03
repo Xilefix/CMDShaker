@@ -44,6 +44,7 @@ public class AccPanel extends JPanel implements ActionListener {
         //EmailAbsender
         emailAbsenderLabel = new JLabel("E-mail Absender:");
         displayPanel.add(emailAbsenderLabel);
+        emailAbsenderLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         emailAbsenderText = new JTextField(30);
         displayPanel.add(emailAbsenderText);
@@ -53,11 +54,13 @@ public class AccPanel extends JPanel implements ActionListener {
         //Passwort
         passwortLabel = new JLabel("Passwort: ");
         displayPanel.add(passwortLabel);
+        passwortLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         passwortText = new JTextField(30);
         displayPanel.add(passwortText);
         //passwortText.setText("Felix#jena1");//x
         passwortText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));//x
+        //passwortText.setEchoChar('*');
         //passwortLabel.add(passwortText);
         
         //displayPanel.add(passwortText);
@@ -75,6 +78,7 @@ public class AccPanel extends JPanel implements ActionListener {
         //SMTP
         sendServerLabel = new JLabel("SMTP-Server:");
         displayPanel.add(sendServerLabel);
+        sendServerLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         sendServerText = new JTextField(30);
         displayPanel.add(sendServerText);
@@ -84,6 +88,7 @@ public class AccPanel extends JPanel implements ActionListener {
         //POP3
         recServerLabel = new JLabel("POP3-Server: ");
         displayPanel.add(recServerLabel);
+        recServerLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
                 
         recServerText = new JTextField(30);
         displayPanel.add(recServerText);
@@ -93,6 +98,7 @@ public class AccPanel extends JPanel implements ActionListener {
         //Benutzer
         benutzerLabel = new JLabel("Benutzer:");
         displayPanel.add(benutzerLabel);
+        benutzerLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         benutzerText = new JTextField(30);
         displayPanel.add(benutzerText);
@@ -108,6 +114,7 @@ public class AccPanel extends JPanel implements ActionListener {
         //smtp Port
         smtpportLabel = new JLabel("smtp-Port: ");
         displayPanel.add(smtpportLabel);
+        smtpportLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         smtpportText = new JTextField(7);
         displayPanel.add(smtpportText);
@@ -118,6 +125,7 @@ public class AccPanel extends JPanel implements ActionListener {
         //pop3 Port
         pop3portLabel = new JLabel("pop3-Port: ");
         displayPanel.add(pop3portLabel);
+        pop3portLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         pop3portText = new JTextField(7);
         displayPanel.add(pop3portText);
