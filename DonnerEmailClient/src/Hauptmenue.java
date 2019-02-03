@@ -23,14 +23,8 @@ import java.util.Properties;
 public class Hauptmenue{
 	
 	public static void main(String[] args) {
-		
-
-    	
-    	
-		
-		
-		JFrame MainFrame = new HauptFrame();
-	    MainFrame.setVisible(true);
+	JFrame MainFrame = new HauptFrame();
+	MainFrame.setVisible(true);
 	    
 	    
 	    
