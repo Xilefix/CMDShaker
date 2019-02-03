@@ -21,10 +21,6 @@ import javax.net.ssl.*;
 import java.util.Properties;
 
 public class Hauptmenue{
-	//public static String sendServer;
-	//public static String recServer;
-	//public static String name;
-	//public static String passwort;
 	
 	public static void main(String[] args) {
 		
