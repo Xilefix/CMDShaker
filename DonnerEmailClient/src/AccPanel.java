@@ -24,9 +24,9 @@ public class AccPanel extends JPanel implements ActionListener {
  	int Schriftgr = 20; //x
 	
  	//Variablen
-	private static JTextField emailAbsenderText, sendServerText, recServerText, benutzerText, smtpportText, pop3portText ;
+	private JTextField emailAbsenderText, sendServerText, recServerText, benutzerText, smtpportText, pop3portText ;
     private JLabel emailAbsenderLabel, passwortLabel, sendServerLabel, recServerLabel, benutzerLabel, smtpportLabel, pop3portLabel;
-    private static JPasswordField passwortText;
+    private JPasswordField passwortText;
     private JButton OKButton = new JButton("OK");
     private JCheckBox ZeigePasswort = new JCheckBox("Passwort anzeigen");
     public String sendServer= "";

@@ -28,7 +28,7 @@ public class HauptPanel extends JPanel implements ActionListener {
     
     
     //Empfangen Emails
-	public static void mailAbholen(String server,String name, String pw) {
+	public void mailAbholen(String server,String name, String pw) {
 		try {
 			Properties props = new Properties();
 			props.setProperty("mail.store.protocol","pop3");
