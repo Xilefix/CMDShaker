@@ -45,11 +45,14 @@ class HauptFrame extends JFrame implements ActionListener{
 	public HauptFrame() {
 		setTitle("DonnerEmailClient");
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
-		this.setSize(d);
+		setSize(550, 500);//x
 		centerWindow(this);
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JPanel panel = new HauptPanel();
         this.add(panel);
+        
+
         
         //Schriftgröße und Art
         String Schriftyp ="Calibri"; 
