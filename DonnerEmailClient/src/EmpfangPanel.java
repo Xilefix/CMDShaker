@@ -11,6 +11,7 @@ public class EmpfangPanel extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
 	//Schriftgröße und Art
     String Schriftyp ="Calibri"; 
  	int Schriftgr = 20; //x
@@ -18,7 +19,7 @@ public class EmpfangPanel extends JPanel {
  	//Variablen
 	private JTextField emailEmpfaengerText,  subjectText ;
 	private JTextArea textText;
-    private JLabel emailEmpfaengerLabel, subjectLabel, textLabel ;
+    private JLabel emailSenderLabel, subjectLabel, textLabel ;
     public String emailEmpfaenger, subject, text;
     
     
@@ -35,6 +36,12 @@ public class EmpfangPanel extends JPanel {
         subjectLabel = new JLabel("Betreff: \n Absender: \n\n");
         displayPanel.add(subjectLabel);
         subjectLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+        
+        //Absender
+        emailSenderLabel = new JLabel("Absender: ");
+        displayPanel.add(emailSenderLabel);
+        emailSenderLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+
 
 
         
