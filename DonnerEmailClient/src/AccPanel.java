@@ -18,6 +18,10 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class AccPanel extends JPanel implements ActionListener {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//Schriftgröße und Art
     String Schriftyp ="Calibri"; 
  	int Schriftgr = 20; //x

@@ -31,6 +31,11 @@ public class Hauptmenue{
 
 
 class HauptFrame extends JFrame implements ActionListener{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public HauptFrame() {
 		setTitle("DonnerEmailClient");
 		//Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
@@ -51,7 +56,7 @@ class HauptFrame extends JFrame implements ActionListener{
         // Erzeugen der Menüleiste und Hinzufügen der Menüs
         JMenuBar menuBar;
         JMenu menu;
-        JMenuItem menuItem;
+        //JMenuItem menuItem;
         menuBar = new JMenuBar();
      	menu = new JMenu("File");
      	
@@ -107,7 +112,7 @@ class HauptFrame extends JFrame implements ActionListener{
      				String[][] mails = new String[messages.length][4];			//initialisiert 2D-array
      				for(int i=0;i<messages.length;i++) {					  	//Schleife speichert Mails in 2D-Array/Datei
      					Message message =messages[i];
-     					Integer num= i+1;
+     					//Integer num= i+1;
      					mails[i][0]=message.getSubject();						//betreff 0
      					//mails[i][1]=num.toString();								//EMail Nummer 1 message ID https://stackoverflow.com/questions/3939051/message-id-in-a-pop3-protocol ganz unten
      					mails[i][1]=message.getFrom()[0].toString();			//abs 1
@@ -223,7 +228,12 @@ class HauptFrame extends JFrame implements ActionListener{
 
 class AccFrame extends JFrame {
 	
-    public AccFrame() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public AccFrame() {
         setTitle("Acc Info");
         setSize(550, 700);//x
         centerWindow(this);
@@ -241,7 +251,12 @@ class AccFrame extends JFrame {
 }
 class SendFrame extends JFrame {
 	
-    public SendFrame() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public SendFrame() {
         setTitle("Send Info");
         setSize(1300, 1000);//x
         centerWindow(this);
@@ -259,7 +274,12 @@ class SendFrame extends JFrame {
 }
 class EmpfangFrame extends JFrame {
 	
-    public EmpfangFrame() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public EmpfangFrame() {
         setTitle("Emails");
         setSize(1200, 900);//x
         centerWindow(this);

@@ -7,6 +7,10 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class EmpfangPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//Schriftgröße und Art
     String Schriftyp ="Calibri"; 
  	int Schriftgr = 20; //x

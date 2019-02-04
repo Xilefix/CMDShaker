@@ -13,6 +13,10 @@ import javax.mail.*;
 import javax.swing.JOptionPane;
 
 public class HauptPanel extends JPanel implements ActionListener {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//Schriftgröße und Art
     String Schriftyp ="Calibri"; 
  	int Schriftgr = 20; //x
@@ -41,7 +45,7 @@ public class HauptPanel extends JPanel implements ActionListener {
 			String[][] mails = new String[messages.length][4];			//initialisiert 2D-array
 			for(int i=0;i<messages.length;i++) {					  	//Schleife speichert Mails in 2D-Array/Datei
 				Message message =messages[i];
-				Integer num= i+1;
+				//Integer num= i+1;
 				mails[i][0]=message.getSubject();						//betreff 0
 				//mails[i][1]=num.toString();								//EMail Nummer 1 message ID https://stackoverflow.com/questions/3939051/message-id-in-a-pop3-protocol ganz unten
 				mails[i][1]=message.getFrom()[0].toString();			//abs 1

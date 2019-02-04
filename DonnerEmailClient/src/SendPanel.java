@@ -22,6 +22,10 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class SendPanel extends JPanel implements ActionListener {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//Schriftgröße und Art
     String Schriftyp ="Calibri"; 
  	int Schriftgr = 20; //x
