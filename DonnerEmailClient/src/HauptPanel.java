@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 import java.io.*;
 import java.util.Properties;
 import javax.mail.*;
@@ -112,6 +114,7 @@ public class HauptPanel extends JPanel implements ActionListener {
         AccButton.addActionListener(this);
         AccButton.setPreferredSize(new Dimension(150,150));
         AccButton.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+        AccButton.setHorizontalAlignment(JButton.CENTER);
         buttonPanel.add(AccButton);
         
 
@@ -120,6 +123,7 @@ public class HauptPanel extends JPanel implements ActionListener {
         SendButton.addActionListener(this);
         SendButton.setPreferredSize(new Dimension(150,150));
         SendButton.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+        SendButton.setHorizontalAlignment(JButton.CENTER);
         buttonPanel.add(SendButton);
         
 // Empfangen button 
@@ -127,6 +131,7 @@ public class HauptPanel extends JPanel implements ActionListener {
         EmailsEmpfangen.addActionListener(this);
         EmailsEmpfangen.setPreferredSize(new Dimension(150,150));
         EmailsEmpfangen.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+        EmailsEmpfangen.setHorizontalAlignment(JButton.CENTER);
         buttonPanel.add(EmailsEmpfangen);
         
 
