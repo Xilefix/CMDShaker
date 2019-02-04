@@ -97,7 +97,7 @@ public class HauptPanel extends JPanel implements ActionListener {
 
     public HauptPanel() { // display panel 
         JPanel displayPanel = new JPanel();
-        displayPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+        displayPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
    
               
 // button panel
@@ -131,7 +131,7 @@ public class HauptPanel extends JPanel implements ActionListener {
 
 // add panels to main panel
         this.setLayout(new BorderLayout());
-        this.add(displayPanel, BorderLayout.NORTH);
+        this.add(displayPanel, BorderLayout.CENTER);
         this.add(buttonPanel, BorderLayout.CENTER);
 
     }

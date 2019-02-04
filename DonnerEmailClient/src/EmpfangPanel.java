@@ -33,15 +33,14 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class EmpfangPanel extends JPanel {
-
-	
 	//Schriftgröße und Art
     String Schriftyp ="Calibri"; 
  	int Schriftgr = 20; //x
 	
  	//Variablen
-	//private JTextField emailEmpfaengerText,  subjectText ;
-    private JLabel  subjectLabel ;
+	private JTextField emailEmpfaengerText,  subjectText ;
+	private JTextArea textText;
+    private JLabel emailEmpfaengerLabel, subjectLabel, textLabel ;
     public String emailEmpfaenger, subject, text;
     
     
