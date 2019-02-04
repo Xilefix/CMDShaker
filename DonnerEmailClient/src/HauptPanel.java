@@ -131,7 +131,7 @@ public class HauptPanel extends JPanel implements ActionListener {
         
 
 
-// add panels to main panel
+// add panels zum HauptPanel
         this.setLayout(new BorderLayout());
         this.add(displayPanel, BorderLayout.NORTH);
         this.add(buttonPanel, BorderLayout.CENTER);
