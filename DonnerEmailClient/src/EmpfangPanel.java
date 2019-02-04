@@ -57,7 +57,7 @@ public class EmpfangPanel extends JPanel {
         emailSenderText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         //Datum
-        datumLabel = new JLabel("Betreff: ");
+        datumLabel = new JLabel("Datum: ");
         displayPanel.add(datumLabel);
         datumLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
