@@ -17,9 +17,9 @@ public class EmpfangPanel extends JPanel {
  	int Schriftgr = 20; //x
 	
  	//Variablen
-	private JTextField emailSenderText,  subjectText ;
+	private JTextField emailSenderText, subjectText, datumText;
 	private JTextArea textText;
-    private JLabel emailSenderLabel, subjectLabel, textLabel ;
+    private JLabel emailSenderLabel, subjectLabel, datumLabel, textLabel;
     public String emailEmpfaenger, subject, text;
     
     
@@ -56,12 +56,24 @@ public class EmpfangPanel extends JPanel {
         displayPanel.add(emailSenderText);
         emailSenderText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
+        //Datum
+        datumLabel = new JLabel("Betreff: ");
+        displayPanel.add(datumLabel);
+        datumLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+        
+        datumText = new JTextField(80);
+        datumText.setText("Felix#jena1");
+        datumText.setEditable(false);
+        datumText.setHorizontalAlignment(JTextField.CENTER);
+        displayPanel.add(datumText);
+        datumText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+        
       //Textkörper
         textLabel = new JLabel("Text: ");
         displayPanel.add(textLabel);
         textLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
 
-        textText = new JTextArea(30,75);
+        textText = new JTextArea(25,75);
         textText.setText("Felix#jena1");
         textText.setEditable(false);
         displayPanel.add(textText);
