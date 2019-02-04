@@ -39,7 +39,7 @@ class HauptFrame extends JFrame implements ActionListener{
 	public HauptFrame() {
 		setTitle("DonnerEmailClient");
 		//Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
-		setSize(550, 400);//x
+		setSize(550, 350);//x
 		centerWindow(this);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
