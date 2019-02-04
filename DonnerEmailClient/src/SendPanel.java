@@ -114,7 +114,7 @@ public class SendPanel extends JPanel implements ActionListener {
     public void ClientSend(String emailEmpfaenger,String subject, String messageText) {
         	try {//String server,String name,String pw,String port,
 
-            int i=1,c=0;
+            int i=1;
 
             String[] rcpt = {emailEmpfaenger};
 
