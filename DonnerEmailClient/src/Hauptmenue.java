@@ -155,7 +155,7 @@ class SendFrame extends JFrame {
 	
     public SendFrame() {
         setTitle("Send Info");
-        setSize(1300, 1200);//x
+        setSize(1300, 1000);//x
         centerWindow(this);
         setResizable(false);
         JPanel panel = new SendPanel();
