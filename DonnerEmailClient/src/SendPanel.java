@@ -93,7 +93,7 @@ public class SendPanel extends JPanel implements ActionListener {
         
 
 
-// add panels to main panel
+// add panels zum HauptPanel
         this.setLayout(new BorderLayout());
         this.add(displayPanel, BorderLayout.CENTER);
         this.add(buttonPanel, BorderLayout.SOUTH);

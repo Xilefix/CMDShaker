@@ -70,7 +70,7 @@ public class EmpfangPanel extends JPanel {
         
 
 
-// add panels to main panel
+// add panels zum HauptPanel
         this.setLayout(new BorderLayout());
         this.add(displayPanel, BorderLayout.CENTER);
 
