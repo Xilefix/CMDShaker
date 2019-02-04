@@ -55,7 +55,7 @@ public class EmpfangPanel extends JPanel {
 
 
         //Betreff
-        subjectLabel = new JLabel("Betreff: ");
+        subjectLabel = new JLabel("Betreff: \n Absender: \n\n");
         displayPanel.add(subjectLabel);
         subjectLabel.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
 
