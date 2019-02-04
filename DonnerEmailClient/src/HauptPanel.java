@@ -55,14 +55,14 @@ public class HauptPanel extends JPanel implements ActionListener {
 				//message.setFlag(Flags.Flag.DELETED, true);			//x
 			}
 
-			BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\mailBU.txt"));
-        	String mail = read.readLine();
+			//BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\mailBU.txt"));
+        	//String mail = read.readLine();
 
 
 			File mailBU=new File("C:\\Users\\Public\\mailBU.txt");
 			try {
 			    BufferedWriter writer = new BufferedWriter(new FileWriter(mailBU));
-			    writer.write(mail);
+			    //writer.write(mail);
 			    writer.write("{");
 				for (int i = 0; i < mails.length; i++) {
 					writer.write("{");
@@ -153,9 +153,29 @@ public class HauptPanel extends JPanel implements ActionListener {
         }
         
         if (source == EmailsEmpfangen) {
-        	//ersetzen
-            
+        	try {
+                BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\acc.txt"));
+                String in = read.readLine();
+
+                String[] line = in.split(";");
+                String server=line[0];
+                String name = line[2];
+                String pw=line[3];
+                //String port=line[5];
+                read.close();
+                mailAbholen(server,name,pw);
+
+            } catch (FileNotFoundException f) {
+                // TODO Auto-generated catch block
+                f.printStackTrace();
+            } catch (IOException f) {
+                // TODO Auto-generated catch block
+                f.printStackTrace();
+            }
+        	JFrame RecFrame = new EmpfangFrame();
+        	RecFrame.setVisible(true);
         }
+        
         
                       
     }

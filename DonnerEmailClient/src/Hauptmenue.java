@@ -1,6 +1,13 @@
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import javax.swing.JButton;
@@ -30,8 +37,8 @@ public class Hauptmenue{
 	    
 	}
 
-}
-		
+
+}	
 
 
 class HauptFrame extends JFrame implements ActionListener{
@@ -87,6 +94,7 @@ class HauptFrame extends JFrame implements ActionListener{
      	
      	//// Setzen der Menüleiste
      	setJMenuBar(menuBar);
+     	
 
      	class Aktion implements ActionListener{
      	public void actionPerformed(ActionEvent e) {
@@ -97,7 +105,8 @@ class HauptFrame extends JFrame implements ActionListener{
         	    SendFrame.setVisible(true);
     		}
     		if (source == Empfangen) {
-    			JOptionPane.showMessageDialog(null, "Empfangen.");
+    			JFrame RecFrame = new EmpfangFrame();
+    			RecFrame.setVisible(true);
     		}
     		if (source == Optionen) {
     			JOptionPane.showMessageDialog(null, "Optionen.");
@@ -159,6 +168,24 @@ class SendFrame extends JFrame {
         centerWindow(this);
         setResizable(false);
         JPanel panel = new SendPanel();
+        this.add(panel);
+    }
+
+    private void centerWindow(Window w) {
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        Dimension d = tk.getScreenSize();
+        setLocation((d.width - w.getWidth()) / 2, (d.height - w.getHeight()) / 2);
+    }
+
+}
+class EmpfangFrame extends JFrame {
+	
+    public EmpfangFrame() {
+        setTitle("Emails");
+        setSize(1200, 900);//x
+        centerWindow(this);
+        setResizable(false);
+        JPanel panel = new EmpfangPanel();
         this.add(panel);
     }
 
