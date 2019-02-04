@@ -281,7 +281,7 @@ class EmpfangFrame extends JFrame {
 
 	public EmpfangFrame() {
         setTitle("Emails");
-        setSize(1200, 900);//x
+        setSize(1300, 1000);//x
         centerWindow(this);
         setResizable(false);
         JPanel panel = new EmpfangPanel();
