@@ -117,11 +117,10 @@ public class SendPanel extends JPanel implements ActionListener {
     }
 
     public void ClientSend(String emailEmpfaenger,String subject, String messageText) {
-        	try {//String server,String name,String pw,String port,
+        try {
 
-            int i=1;
-
-            String[] rcpt = {emailEmpfaenger};
+        	int i=1;
+        	String[] rcpt = emailEmpfaenger.split(",");
 
             boolean sessionDebug = false;
 

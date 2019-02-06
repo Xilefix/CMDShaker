@@ -62,7 +62,7 @@ public class HauptPanel extends JPanel implements ActionListener {
 
 
 			File mailBU=new File("C:\\Users\\Public\\mailBU.txt");
-			try {
+			/*try {
 			    BufferedWriter writer = new BufferedWriter(new FileWriter(mailBU));
 			    //writer.write(mail);
 			    writer.write("{");
@@ -81,7 +81,27 @@ public class HauptPanel extends JPanel implements ActionListener {
 			}
 			catch (IOException e) {
 			e.printStackTrace();
-			}
+			}*/
+			try {
+                boolean checkFile = new File("C:\\Users\\Public\\mailAll.txt").isFile();
+
+                BufferedWriter writer1 = new BufferedWriter(new FileWriter("C:\\Users\\Public\\mailAll.txt", true));
+                if(checkFile) {
+                    writer1.write(",");
+                }
+                for (int i = 0; i < mails.length; i++) {
+                    for (int j = 0; j < mails[i].length; j++) {
+                        writer1.write("\""+ mails[i][j]+ "\"");
+                        if(j<mails[i].length-1) {writer1.write(",-,");}
+                    }
+                    if(i<mails.length-1) {writer1.write(";-;");}
+                    //writer.newLine(); // <-----------------
+                }
+                writer1.close();;
+            }
+            catch (IOException e) {
+            e.printStackTrace();
+            }//z
 			JOptionPane.showMessageDialog(null, "Sie haben "+mails.length+" neue Emails im Postfach.");
 
 
