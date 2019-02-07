@@ -13,6 +13,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.mail.*;
 import java.util.Properties;
 
@@ -281,9 +282,12 @@ class EmpfangFrame extends JFrame {
 	public EmpfangFrame() {
         setTitle("Emails");
         setSize(1300, 1000);//x
+        //setSize(1230, 750);
         centerWindow(this);
-        setResizable(false);
+        setResizable(false);        
         JPanel panel = new EmpfangPanel();
+        JScrollPane scroll = new JScrollPane(panel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+        //this.add(scroll);
         this.add(panel);
     }
 
