@@ -115,7 +115,7 @@ public class EmpfangPanel extends JPanel {
 					        
 			                //EMail.setLayout(new BorderLayout());
 					        EMail.add(displayPanel1, BorderLayout.CENTER);
-					        System.out.println("hallo");// alles ist zweimal meistens manchmal nicht hier wieso??
+					        //System.out.println("hallo");// alles ist zweimal mit der Maus meistens manchmal nicht wieso??
 					        EMail.setVisible(true);
     						
     						
