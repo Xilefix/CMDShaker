@@ -18,7 +18,7 @@ public class HauptPanel extends JPanel implements ActionListener {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	//Schriftgröße und Art
+	//Schriftgroesse und Art
     String Schriftyp ="Calibri"; 
  	int Schriftgr = 20; //x
 	
@@ -54,38 +54,20 @@ public class HauptPanel extends JPanel implements ActionListener {
 				if ( message.isMimeType( "text/plain" ) ) {				//inhalt 3
 					mails[i][3]=message.getContent().toString();
 				}
-				message.setFlag(Flags.Flag.DELETED, true);			//x
+				message.setFlag(Flags.Flag.DELETED, true);			
 			}
 
-			//BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\mailBU.txt"));
-        	//String mail = read.readLine();
+		
 
 
 
-			/*try {
-			    BufferedWriter writer = new BufferedWriter(new FileWriter(mailBU));
-			    //writer.write(mail);
-			    writer.write("{");
-				for (int i = 0; i < mails.length; i++) {
-					writer.write("{");
-					for (int j = 0; j < mails[i].length; j++) {
-						writer.write("\""+ mails[i][j]+ "\"");
-						if(j<mails[i].length-1) {writer.write(",");}
-					}
-					writer.write("}");
-					if(i<mails.length-1) {writer.write(",");}
-					//writer.newLine(); // <-----------------
-				}
-				writer.write("}");
-				writer.close();
-			}
-			catch (IOException e) {
-			e.printStackTrace();
-			}*/
+		
 			try {
-                boolean checkFile = new File("C:\\Users\\Public\\mailAll.txt").isFile();
+                boolean checkFile = new File("C:\\Users\\Public\\mailAll.txt").isFile();//windows
+                //boolean checkFile = new File("C:\\Users\\Public\\mailAll.txt").isFile();//linux
 
-                BufferedWriter writer1 = new BufferedWriter(new FileWriter("C:\\Users\\Public\\mailAll.txt", true));
+                BufferedWriter writer1 = new BufferedWriter(new FileWriter("C:\\Users\\Public\\mailAll.txt", true));//windows
+                //BufferedWriter writer1 = new BufferedWriter(new FileWriter("C:\\Users\\Public\\mailAll.txt", true));//linux
                 if(checkFile) {
                     writer1.write(";-;");
                 }
@@ -179,7 +161,8 @@ public class HauptPanel extends JPanel implements ActionListener {
         
         if (source == EmailsEmpfangen) {
         	try {
-                BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\acc.txt"));
+                BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\acc.txt"));//windows
+                //BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\acc.txt"));//linux
                 String in = read.readLine();
 
                 String[] line = in.split(";");

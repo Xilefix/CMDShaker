@@ -124,14 +124,15 @@ class HauptFrame extends JFrame implements ActionListener{
      					message.setFlag(Flags.Flag.DELETED, true);			//x
      				}
 
-     				//BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\mailBU.txt"));
-     	        	//String mail = read.readLine();
+
 
 
      				try {
-     	                boolean checkFile = new File("C:\\Users\\Public\\mailAll.txt").isFile();
+     	                boolean checkFile = new File("C:\\Users\\Public\\mailAll.txt").isFile();//windows
+     	               //boolean checkFile = new File("C:\\Users\\Public\\mailAll.txt").isFile();//linux
 
-     	                BufferedWriter writer1 = new BufferedWriter(new FileWriter("C:\\Users\\Public\\mailAll.txt", true));
+     	                BufferedWriter writer1 = new BufferedWriter(new FileWriter("C:\\Users\\Public\\mailAll.txt", true));//windows
+     	               //BufferedWriter writer1 = new BufferedWriter(new FileWriter("C:\\Users\\Public\\mailAll.txt", true));//linux
      	                if(checkFile) {
      	                    writer1.write(";-;");
      	                }
@@ -171,7 +172,8 @@ class HauptFrame extends JFrame implements ActionListener{
     		}
     		if (source == Empfangen) {
     			try {
-                    BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\acc.txt"));
+                    BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\acc.txt"));//windows
+                    //BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\acc.txt"));//linux
                     String in = read.readLine();
 
                     String[] line = in.split(";");

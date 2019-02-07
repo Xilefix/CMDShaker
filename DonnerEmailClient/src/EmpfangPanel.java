@@ -98,12 +98,10 @@ public class EmpfangPanel extends JPanel {
     					public void valueChanged(ListSelectionEvent event) {
     						JFrame EMail = new JFrame("Emails");
     						EMail.setSize(1230, 750);
-    						EMail.setResizable(false);
-    						
     						Toolkit tk = Toolkit.getDefaultToolkit();
     						Dimension d = tk.getScreenSize();
-					        setLocation((d.width - EMail.getWidth()) / 2, (d.height - EMail.getHeight()) / 2);
-					        
+					        EMail.setLocation((d.width - EMail.getWidth()) / 2, (d.height - EMail.getHeight()) / 2);
+					        EMail.setResizable(false);					        
 					        JPanel displayPanel1 = new JPanel();
 					        displayPanel1.setLayout(new FlowLayout(FlowLayout.LEADING));//zweimal
 					        textText = new JTextArea(25,75);
