@@ -61,7 +61,7 @@ public class HauptPanel extends JPanel implements ActionListener {
         	//String mail = read.readLine();
 
 
-			File mailBU=new File("C:\\Users\\Public\\mailBU.txt");
+
 			/*try {
 			    BufferedWriter writer = new BufferedWriter(new FileWriter(mailBU));
 			    //writer.write(mail);

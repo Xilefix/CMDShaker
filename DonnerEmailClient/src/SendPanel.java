@@ -29,7 +29,7 @@ public class SendPanel extends JPanel implements ActionListener {
 	
 	//Schriftgröße und Art
     String Schriftyp ="Calibri"; 
- 	int Schriftgr = 20; //x
+ 	int Schriftgr = 20; 
 	
  	//Variablen
 	private JTextField emailEmpfaengerText,  subjectText ;
