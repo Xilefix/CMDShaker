@@ -1,6 +1,8 @@
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -61,7 +63,8 @@ public class EmpfangPanel extends JPanel {
         	
         	
         	
-        	String[] line = mailinhaltAlsEinzeiler("C:\\Users\\Public\\mailAll.txt").split(";-;");
+        	String[] line = mailinhaltAlsEinzeiler("C:\\Users\\Public\\mailAll.txt").split(";-;"); //windows
+        	//String[] line = mailinhaltAlsEinzeiler("C:\\Users\\Public\\mailAll.txt").split(";-;");//linux
         	String mails[][]=new String[line.length][4];
         	String[] listArray = new String[line.length]; //Betreff absender und date
         	String[] listArray1 = new String[line.length]; //email
@@ -93,29 +96,29 @@ public class EmpfangPanel extends JPanel {
             		new ListSelectionListener() {
             			
     					public void valueChanged(ListSelectionEvent event) {
-    						JFrame EMail = new JFrame();
-    						EMail.setTitle("Emails");
+    						JFrame EMail = new JFrame("Emails");
     						EMail.setSize(1230, 750);
     						EMail.setResizable(false);
     						
-    						//Toolkit tk = Toolkit.getDefaultToolkit();
-    						//Dimension d = tk.getScreenSize();
-					        //setLocation((d.width - EMail.getWidth()) / 2, (d.height - EMail.getHeight()) / 2);
-					        EMail.setVisible(true);
-					        JPanel displayPanel = new JPanel();
-					        displayPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
+    						Toolkit tk = Toolkit.getDefaultToolkit();
+    						Dimension d = tk.getScreenSize();
+					        setLocation((d.width - EMail.getWidth()) / 2, (d.height - EMail.getHeight()) / 2);
+					        
+					        JPanel displayPanel1 = new JPanel();
+					        displayPanel1.setLayout(new FlowLayout(FlowLayout.LEADING));//zweimal
 					        textText = new JTextArea(25,75);
 					        textText.setText(listArray1[emailList.getSelectedIndex()]);
 					        textText.setLineWrap(true); //https://stackoverflow.com/questions/6410338/set-the-last-word-of-the-line-to-the-next-line-in-jtextarea
 			                textText.setWrapStyleWord(true);
 			            	textText.setEditable(false);                
 			                textText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr)); 
-			                displayPanel.add(textText);
+			                displayPanel1.add(textText);
+			                EMail.add(displayPanel1);
 					        
-					        EMail.setLayout(new BorderLayout());
-					        EMail.add(displayPanel, BorderLayout.CENTER);
-					        
-    						
+			                //EMail.setLayout(new BorderLayout());
+					        EMail.add(displayPanel1, BorderLayout.CENTER);
+					        System.out.println("hallo");// alles ist zweimal meistens manchmal nicht hier wieso??
+					        EMail.setVisible(true);
     						
     						
     						
@@ -123,20 +126,13 @@ public class EmpfangPanel extends JPanel {
     				});
         	
         	
-        	//textText.setText(mailinhaltAlsEinzeiler("C:\\Users\\Public\\mailAll.txt"));
-			
-			
-			//System.out.println(mailinhaltAlsEinzeiler("C:\\Users\\Public\\mailAll.txt"));
-			//System.out.println(mails[1][1]);
-
+        	
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        //textText.setEditable(false);
-        //displayPanel.add(textText);
-        //textText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
+        
 
         
 
