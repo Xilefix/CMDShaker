@@ -52,7 +52,7 @@ public class SendPanel extends JPanel implements ActionListener {
 
         emailEmpfaengerText = new JTextField(80);
         displayPanel.add(emailEmpfaengerText);
-        emailEmpfaengerText.setText("Felix.liesendahl@web.de");//x
+        emailEmpfaengerText.setText("Felix.liesendahl@web.de");
         emailEmpfaengerText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
 
 

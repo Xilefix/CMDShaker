@@ -39,7 +39,7 @@ class HauptFrame extends JFrame implements ActionListener{
 
 	public HauptFrame() {
 		setTitle("DonnerEmailClient");
-		setSize(550, 250);//x
+		setSize(550, 250);
 		centerWindow(this);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -51,7 +51,7 @@ class HauptFrame extends JFrame implements ActionListener{
         
         //Schriftgröße und Art
         String Schriftyp ="Calibri"; 
-     	int Schriftgr = 20; //x
+     	int Schriftgr = 20; 
         
         // Erzeugen der Menüleiste und Hinzufügen der Menüs
         JMenuBar menuBar;
@@ -64,7 +64,7 @@ class HauptFrame extends JFrame implements ActionListener{
      	
      	menu.setMnemonic(KeyEvent.VK_A);
      	menu.getAccessibleContext().setAccessibleDescription("Filemenue");
-     	menu.setPreferredSize(new Dimension(50,40));//x
+     	menu.setPreferredSize(new Dimension(50,40));
      	
      	
      	menuBar.add(menu);
@@ -86,7 +86,7 @@ class HauptFrame extends JFrame implements ActionListener{
      	neueEMail.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
      	Empfangen.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
      	Optionen.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
-     	Beenden.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));//x
+     	Beenden.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
      	
      	
      	
@@ -120,7 +120,7 @@ class HauptFrame extends JFrame implements ActionListener{
      					if ( message.isMimeType( "text/plain" ) ) {				//inhalt 3
      						mails[i][3]=message.getContent().toString();
      					}
-     					message.setFlag(Flags.Flag.DELETED, true);			//x
+     					message.setFlag(Flags.Flag.DELETED, true);			
      				}
 
 
@@ -236,7 +236,7 @@ class AccFrame extends JFrame {
 
 	public AccFrame() {
         setTitle("Acc Info");
-        setSize(550, 700);//x
+        setSize(550, 700);
         centerWindow(this);
         setResizable(false);
         JPanel panel = new AccPanel();
@@ -259,7 +259,7 @@ class SendFrame extends JFrame {
 
 	public SendFrame() {
         setTitle("Send Info");
-        setSize(1300, 1000);//x
+        setSize(1300, 1000);
         centerWindow(this);
         setResizable(false);
         JPanel panel = new SendPanel();
@@ -282,7 +282,7 @@ class EmpfangFrame extends JFrame {
 
 	public EmpfangFrame() {
         setTitle("Emails");
-        //setSize(1300, 1000);//x
+        //setSize(1300, 1000);
         setSize(900, 600);
         centerWindow(this);
         setResizable(false);        

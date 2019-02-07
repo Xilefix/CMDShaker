@@ -25,7 +25,7 @@ public class AccPanel extends JPanel implements ActionListener {
 	
 	//Schriftgröße und Art
     String Schriftyp ="Calibri"; 
- 	int Schriftgr = 20; //x
+ 	int Schriftgr = 20; 
 	
  	//Variablen
 	private JTextField emailAbsenderText, sendServerText, recServerText, benutzerText, smtpportText, pop3portText ;
@@ -37,7 +37,7 @@ public class AccPanel extends JPanel implements ActionListener {
 	public String recServer= "";
 	public String name= "";
 	public String passwort= "";
-	public String smtpport= "";//x
+	public String smtpport= "";
 	public String pop3port= "";
 	
 
@@ -56,7 +56,7 @@ public class AccPanel extends JPanel implements ActionListener {
         
         emailAbsenderText = new JTextField(30);
         displayPanel.add(emailAbsenderText);
-        emailAbsenderText.setText("unijena123@firemail.de");//x
+        emailAbsenderText.setText("unijena123@firemail.de");
         emailAbsenderText.setFont(new Font(Schriftyp, Font.BOLD, Schriftgr));
         
         //Passwort

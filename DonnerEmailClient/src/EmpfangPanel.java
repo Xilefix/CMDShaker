@@ -26,7 +26,7 @@ public class EmpfangPanel extends JPanel {
 	
 	//Schriftgroesse und Art
     String Schriftyp ="Calibri"; 
- 	int Schriftgr = 20; //x
+ 	int Schriftgr = 20; 
  	
 	
  	//Variablen

@@ -20,7 +20,7 @@ public class HauptPanel extends JPanel implements ActionListener {
 	
 	//Schriftgroesse und Art
     String Schriftyp ="Calibri"; 
- 	int Schriftgr = 20; //x
+ 	int Schriftgr = 20; 
 	
 	
 	//Buttons
