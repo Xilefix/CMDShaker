@@ -121,7 +121,7 @@ class HauptFrame extends JFrame implements ActionListener{
      					if ( message.isMimeType( "text/plain" ) ) {				//inhalt 3
      						mails[i][3]=message.getContent().toString();
      					}
-     					//message.setFlag(Flags.Flag.DELETED, true);			//x
+     					message.setFlag(Flags.Flag.DELETED, true);			//x
      				}
 
      				//BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\mailBU.txt"));
@@ -133,7 +133,7 @@ class HauptFrame extends JFrame implements ActionListener{
 
      	                BufferedWriter writer1 = new BufferedWriter(new FileWriter("C:\\Users\\Public\\mailAll.txt", true));
      	                if(checkFile) {
-     	                    writer1.write(",");
+     	                    writer1.write(";-;");
      	                }
      	                for (int i = 0; i < mails.length; i++) {
      	                    for (int j = 0; j < mails[i].length; j++) {
@@ -151,7 +151,7 @@ class HauptFrame extends JFrame implements ActionListener{
      				JOptionPane.showMessageDialog(null, "Sie haben "+mails.length+" neue Emails im Postfach.");
 
 
-     				emailFolder.close(false);
+     				emailFolder.close(true);
      				emailStore.close();
      			}catch(NoSuchProviderException nspe) {
      				nspe.printStackTrace();
@@ -281,14 +281,14 @@ class EmpfangFrame extends JFrame {
 
 	public EmpfangFrame() {
         setTitle("Emails");
-        setSize(1300, 1000);//x
-        //setSize(1230, 750);
+        //setSize(1300, 1000);//x
+        setSize(1230, 750);
         centerWindow(this);
         setResizable(false);        
         JPanel panel = new EmpfangPanel();
         JScrollPane scroll = new JScrollPane(panel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-        //this.add(scroll);
-        this.add(panel);
+        this.add(scroll);
+        //this.add(panel);
     }
 
     private void centerWindow(Window w) {

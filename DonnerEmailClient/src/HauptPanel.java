@@ -54,7 +54,7 @@ public class HauptPanel extends JPanel implements ActionListener {
 				if ( message.isMimeType( "text/plain" ) ) {				//inhalt 3
 					mails[i][3]=message.getContent().toString();
 				}
-				//message.setFlag(Flags.Flag.DELETED, true);			//x
+				message.setFlag(Flags.Flag.DELETED, true);			//x
 			}
 
 			//BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\Public\\mailBU.txt"));
@@ -87,7 +87,7 @@ public class HauptPanel extends JPanel implements ActionListener {
 
                 BufferedWriter writer1 = new BufferedWriter(new FileWriter("C:\\Users\\Public\\mailAll.txt", true));
                 if(checkFile) {
-                    writer1.write(",");
+                    writer1.write(";-;");
                 }
                 for (int i = 0; i < mails.length; i++) {
                     for (int j = 0; j < mails[i].length; j++) {
@@ -105,7 +105,7 @@ public class HauptPanel extends JPanel implements ActionListener {
 			JOptionPane.showMessageDialog(null, "Sie haben "+mails.length+" neue Emails im Postfach.");
 
 
-			emailFolder.close(false);
+			emailFolder.close(true);
 			emailStore.close();
 		}catch(NoSuchProviderException nspe) {
 			nspe.printStackTrace();
