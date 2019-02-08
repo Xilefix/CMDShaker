@@ -124,9 +124,35 @@ class HauptFrame extends JFrame implements ActionListener{
      				}
 
 
+     				if(messages.length>0){
+     	                  try {
+     	                      boolean checkFile = new File("C:\\Users\\Public\\mailAll.txt").isFile();//windows
+     	                     //boolean checkFile = new File("C:\\Users\\Public\\mailAll.txt").isFile();//linux
+
+     	                      BufferedWriter writer1 = new BufferedWriter(new FileWriter("C:\\Users\\Public\\mailAll.txt", true));//windows
+     	                     //BufferedWriter writer1 = new BufferedWriter(new FileWriter("C:\\Users\\Public\\mailAll.txt", true));//linux
+     	                      
+     	                      if(checkFile) {
+     	                          writer1.write(";-;");
+     	                      }
+     	                      for (int i = 0; i < mails.length; i++) {
+     	                          for (int j = 0; j < mails[i].length; j++) {
+     	                              writer1.write("\""+ mails[i][j]+ "\"");
+     	                              if(j<mails[i].length-1) {writer1.write(",-,");}
+     	                          }
+     	                          if(i<mails.length-1) {writer1.write(";-;");}
+     	                          else{writer1.write("\"");}
+     	                      }
+     	                      writer1.close();;
+     	                  }
+     	                  catch (IOException e) {
+     	                  e.printStackTrace();
+     	                  }
+     	                  }
+     	                  JOptionPane.showMessageDialog(null, "Sie haben "+mails.length+" neue Emails im Postfach.");
 
 
-     				try {
+     				/*try {
      	                boolean checkFile = new File("C:\\Users\\Public\\mailAll.txt").isFile();//windows
      	               //boolean checkFile = new File("C:\\Users\\Public\\mailAll.txt").isFile();//linux
 
@@ -149,7 +175,7 @@ class HauptFrame extends JFrame implements ActionListener{
      	            e.printStackTrace();
      	            }//z
      				JOptionPane.showMessageDialog(null, "Sie haben "+mails.length+" neue Emails im Postfach.");
-
+					*/
 
      				emailFolder.close(true);
      				emailStore.close();
